@@ -561,7 +561,7 @@
               "padding-left": "30px"
             },
             ".custom-card-text": {
-              "text-align": "center"
+              "text-align": "left"
             },
             ".custom-section-subtitle": {
               "color": "#2e7d32"
