@@ -44,7 +44,7 @@
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 20,
+    "uniqCompNum": 24,
     "versionPublish": "5.6.5",
     "screenshot": "screenshot.png",
     "publishChangesOnly": false,
@@ -278,7 +278,7 @@
               "align-items": "center"
             },
             "H3": {
-              "color": "#43a047",
+              "color": "#2e7d32",
               "text-align": "center"
             },
             ".mbr-text": {
@@ -1046,13 +1046,217 @@
             }
           },
           "_name": "footer2",
-          "_customHTML": "<section class=\"footer2\" group=\"Footers\" plugins=\"amp-main\" global once=\"footer\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <header>Size</header>\n    <select title=\"Block Type\" name=\"typeBlock\">\n        <option value=\"1\">Type 1</option>\n        <option value=\"2\" selected>Type 2</option>\n    </select>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Reverse Content\" name=\"reverseContent\" condition=\"typeBlock==2\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <!--  -->\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Items\" name=\"showItems\" checked>\n    <input type=\"range\" inline title=\"Items Count\" name=\"itemsCount\" min=\"1\" max=\"7\" step=\"1\" value=\"2\" condition=\"showItems\">\n    <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Copyright\" name=\"showCopyright\" checked>\n    <header>Icons</header>\n    <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked>\n    <input type=\"range\" title=\"Icons Count\" name=\"iconsAmount\" min=\"1\" max=\"6\" value=\"5\" condition=\"showIcons\">\n    <input type=\"range\" title=\"Icons Size\" name=\"iconsSize\" min=\"1\" max=\"2.5\" step=\"0.1\" value=\"1.7\" condition=\"showIcons\">\n    <input type=\"color\" title=\"Icon 1 BG\" name=\"icon1Bg\" value=\"#55acee\" condition=\"showIcons\">\n    <input type=\"color\" title=\"Icon 2 BG\" name=\"icon2Bg\" value=\"#e4405f\" condition=\"showIcons &amp;&amp; iconsAmount > 1\">\n    <input type=\"color\" title=\"Icon 3 BG\" name=\"icon3Bg\" value=\"#cd201f\" condition=\"showIcons &amp;&amp; iconsAmount > 2\">\n    <input type=\"color\" title=\"Icon 4 BG\" name=\"icon4Bg\" value=\"#3b5999\" condition=\"showIcons &amp;&amp; iconsAmount > 3\">\n    <input type=\"color\" title=\"Icon 5 BG\" name=\"icon5Bg\" value=\"#0088cc\" condition=\"showIcons &amp;&amp; iconsAmount > 4\">\n    <input type=\"color\" title=\"Icon 6 BG\" name=\"icon6Bg\" value=\"#4c75a3\" condition=\"showIcons &amp;&amp; iconsAmount > 5\">\n    <!--  -->\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\">\n        <input type=\"image\" title=\"Background Image\" value=\"@THEME_PATH@/components/_images/background4.jpg\">\n        <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n    </fieldset>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' && overlay\">\n    <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"footer-container\" mbr-class=\"{'container': !fullWidth,\n                     'container-fluid': fullWidth,\n                     'mbr-jc-c': (!showCopyright || !showItems) && typeBlock==2,\n                     'mbr-flex': typeBlock==2,\n                     'mbr-row-reverse': reverseContent}\">\n        <div mbr-list mbr-list-grow=\"itemsCount\" class=\"mbr-row link-items mbr-jc-c mbr-fonts-style\" mbr-if=\"showItems\" mbr-theme-style=\"display-7\">\n            <p class=\"mbr-text fLink mbr-px-1 mbr-bold\" data-app-selector=\".fLink\">Informazioni di contatto e ufficio di rappresentanza:<br>\n<br><span style=\"font-weight: normal;\">Via Uberto Visconti di Modrone, 6\n<br>20122 Milano<br>\n<br>info@tutela-legale.net<br>+39 338 - 22 34 395</span></p>\n            \n            \n            \n            \n        <p class=\"mbr-text fLink mbr-px-1 mbr-bold\" data-app-selector=\".fLink\"><br>\n<br><br></p></div>\n        <div class=\"mbr-pt-3 mbr-pb-5 mbr-text-al-c\">\n            <p class=\"mbr-fonts-style mbr-pb-3\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">Tutela-legale.net è un marchio:<br>Xure.it di Pasquale Caterisano<br>Via Pietro Valsecchi, 2 - 22033 Asso (CO)\n<br>RUI A000055288  P. IVA 04012380137\n<br>PEC: pasquale.caterisano @ pec.it&nbsp;</p>\n            <div class=\"iconfont-wrapper custom-bg-1\" mbr-if=\"showIcons\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-twitter\"></span>\n            </div>\n            <div class=\"iconfont-wrapper custom-bg-2\" mbr-if=\"showIcons &amp;&amp; iconsAmount > 1\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-instagram\"></span>\n            </div>\n            <div class=\"iconfont-wrapper custom-bg-3\" mbr-if=\"showIcons &amp;&amp; iconsAmount > 2\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-youtube\"></span>\n            </div>\n            <div class=\"iconfont-wrapper custom-bg-4\" mbr-if=\"showIcons &amp;&amp; iconsAmount > 3\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-facebook\"></span>\n            </div>\n            <div class=\"iconfont-wrapper custom-bg-1\" mbr-if=\"showIcons &amp;&amp; iconsAmount > 4\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-twitter\"></span>\n            </div>\n            <div class=\"iconfont-wrapper custom-bg-2\" mbr-if=\"showIcons &amp;&amp; iconsAmount > 5\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-instagram\"></span>\n            </div>\n        </div>\n        <div class=\"copyright mbr-px-2 mbr-flex mbr-jc-c\" mbr-if=\"showCopyright\">\n            <p class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".copyright .mbr-text\" data-app-placeholder=\"Type Text\">Privacy e Cookie Policy\n<br>Allegato 3 ,  Allegato 4,  Allegato 4Ter\n<br>Set informativo\n<br>Condizioni di polizza\n<br>Reclami<br>Normativa vendita a distanza<br>Termini e condizioni sito<br><br>Tutela-legale.net © Copyright 2025 - All Rights Reserved</p>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"footer2\" group=\"Footers\" plugins=\"amp-main\" global once=\"footer\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <header>Size</header>\n    <select title=\"Block Type\" name=\"typeBlock\">\n        <option value=\"1\">Type 1</option>\n        <option value=\"2\" selected>Type 2</option>\n    </select>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Reverse Content\" name=\"reverseContent\" condition=\"typeBlock==2\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <!--  -->\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Items\" name=\"showItems\" checked>\n    <input type=\"range\" inline title=\"Items Count\" name=\"itemsCount\" min=\"1\" max=\"7\" step=\"1\" value=\"2\" condition=\"showItems\">\n    <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Copyright\" name=\"showCopyright\" checked>\n    <header>Icons</header>\n    <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked>\n    <input type=\"range\" title=\"Icons Count\" name=\"iconsAmount\" min=\"1\" max=\"6\" value=\"5\" condition=\"showIcons\">\n    <input type=\"range\" title=\"Icons Size\" name=\"iconsSize\" min=\"1\" max=\"2.5\" step=\"0.1\" value=\"1.7\" condition=\"showIcons\">\n    <input type=\"color\" title=\"Icon 1 BG\" name=\"icon1Bg\" value=\"#55acee\" condition=\"showIcons\">\n    <input type=\"color\" title=\"Icon 2 BG\" name=\"icon2Bg\" value=\"#e4405f\" condition=\"showIcons &amp;&amp; iconsAmount > 1\">\n    <input type=\"color\" title=\"Icon 3 BG\" name=\"icon3Bg\" value=\"#cd201f\" condition=\"showIcons &amp;&amp; iconsAmount > 2\">\n    <input type=\"color\" title=\"Icon 4 BG\" name=\"icon4Bg\" value=\"#3b5999\" condition=\"showIcons &amp;&amp; iconsAmount > 3\">\n    <input type=\"color\" title=\"Icon 5 BG\" name=\"icon5Bg\" value=\"#0088cc\" condition=\"showIcons &amp;&amp; iconsAmount > 4\">\n    <input type=\"color\" title=\"Icon 6 BG\" name=\"icon6Bg\" value=\"#4c75a3\" condition=\"showIcons &amp;&amp; iconsAmount > 5\">\n    <!--  -->\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\">\n        <input type=\"image\" title=\"Background Image\" value=\"@THEME_PATH@/components/_images/background4.jpg\">\n        <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n    </fieldset>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' && overlay\">\n    <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"footer-container\" mbr-class=\"{'container': !fullWidth,\n                     'container-fluid': fullWidth,\n                     'mbr-jc-c': (!showCopyright || !showItems) && typeBlock==2,\n                     'mbr-flex': typeBlock==2,\n                     'mbr-row-reverse': reverseContent}\">\n        <div mbr-list mbr-list-grow=\"itemsCount\" class=\"mbr-row link-items mbr-jc-c mbr-fonts-style\" mbr-if=\"showItems\" mbr-theme-style=\"display-7\">\n            <p class=\"mbr-text fLink mbr-px-1 mbr-bold\" data-app-selector=\".fLink\">Informazioni di contatto e ufficio di rappresentanza:<br>\n<br><span style=\"font-weight: normal;\">Via Uberto Visconti di Modrone, 6\n<br>20122 Milano<br>\n<br>info@tutela-legale.net<br>+39 338 - 22 34 395</span></p>\n            \n            \n            \n            \n        <p class=\"mbr-text fLink mbr-px-1 mbr-bold\" data-app-selector=\".fLink\"><br>\n<br><br></p></div>\n        <div class=\"mbr-pt-3 mbr-pb-5 mbr-text-al-c\">\n            <p class=\"mbr-fonts-style mbr-pb-3\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">Tutela-legale.net è un marchio:<br>Xure.it di Pasquale Caterisano<br>Via Pietro Valsecchi, 2 - 22033 Asso (CO)\n<br>RUI A000055288  P. IVA 04012380137\n<br>PEC: pasquale.caterisano @ pec.it&nbsp;</p>\n            <div class=\"iconfont-wrapper custom-bg-1\" mbr-if=\"showIcons\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-twitter\"></span>\n            </div>\n            <div class=\"iconfont-wrapper custom-bg-2\" mbr-if=\"showIcons &amp;&amp; iconsAmount > 1\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-instagram\"></span>\n            </div>\n            <div class=\"iconfont-wrapper custom-bg-3\" mbr-if=\"showIcons &amp;&amp; iconsAmount > 2\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-youtube\"></span>\n            </div>\n            <div class=\"iconfont-wrapper custom-bg-4\" mbr-if=\"showIcons &amp;&amp; iconsAmount > 3\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-facebook\"></span>\n            </div>\n            <div class=\"iconfont-wrapper custom-bg-1\" mbr-if=\"showIcons &amp;&amp; iconsAmount > 4\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-twitter\"></span>\n            </div>\n            <div class=\"iconfont-wrapper custom-bg-2\" mbr-if=\"showIcons &amp;&amp; iconsAmount > 5\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-instagram\"></span>\n            </div>\n        </div>\n        <div class=\"copyright mbr-px-2 mbr-flex mbr-jc-c\" mbr-if=\"showCopyright\">\n            <p class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".copyright .mbr-text\" data-app-placeholder=\"Type Text\">Privacy e Cookie Policy\n<br>Allegato 3 ,  Allegato 4,  Allegato 4Ter\n<br>Set informativo\n<br>Condizioni di polizza\n<br>Reclami<br>Normativa vendita a distanza<br>Termini e condizioni sito<br><br>Tutela-legale.net © Copyright 2025 - All Rights Reserved</p>\n        </div>\n    </div>\n</section>",
           "_cid": "rgCTNptUyU",
           "_anchor": "footer2-5p",
           "_protectedParams": [],
           "_global": true,
           "_once": "footer",
           "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".fLink": {
+              "color": "#8A9298"
+            },
+            ".copyright .mbr-text": {
+              "color": "#8A9298"
+            },
+            ".link-text": {
+              "text-decoration": "underline"
+            },
+            ".navbar-logo": {
+              "width": "180px"
+            },
+            "@media (max-width: 767px)": {
+              ".navbar-logo": {
+                "margin-bottom": "1rem"
+              },
+              ".wrapper": {
+                "justify-content": "center"
+              }
+            },
+            "@media (min-width: 767px) and (max-width: 992px)": {
+              ".wrapper": {
+                "justify-content": "space-between"
+              },
+              ".mbr-row": {
+                "margin-left": "0rem"
+              }
+            },
+            "@media (min-width: 992px)": {
+              ".wrapper": {
+                "justify-content": "space-between"
+              },
+              ".mbr-row": {
+                "margin-left": "0rem"
+              }
+            }
+          },
+          "_name": "footer2",
+          "_sourceTheme": "partneramp",
+          "_customHTML": "<section class=\"footer2\" group=\"Footers\" plugins=\"amp-main\" global=\"\" once=\"footer\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Logo\" name=\"showLogo\" checked=\"\">\n        <input type=\"checkbox\" title=\"Copyright\" name=\"showCopyright\" checked=\"\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/partneramp/components/_images/background-1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#081219\" selected=\"\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked=\"\" condition=\"bg.type!='color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' &amp;&amp; overlay\">\n        <input type=\"range\" inline=\"\" title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.1\" condition=\"bg.type!='color' &amp;&amp; overlay\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type !== 'color'\"></div>\n    <div class=\"container footer-container\">\n        <div class=\"mbr-row wrapper\">\n            <div mbr-if=\"showLogo\" class=\"navbar-logo\">\n                <amp-img src=\"@PROJECT_PATH@/assets/images/logo.png\" layout=\"responsive\" height=\"38.15\" width=\"179.95283018867926\" alt=\"image\" class=\"placeholder-loader\">\n                    <div placeholder=\"\" class=\"placeholder\"></div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/logo.png\" alt=\"\">\n                </amp-img>\n            </div>\n            <div class=\"copyright mbr-px-2 mbr-flex mbr-jc-c mbr-ai-c\" mbr-if=\"showCopyright\">\n                <p class=\"mbr-text mbr-fonts-style mbr-regular align-center\" mbr-theme-style=\"display-4\" data-app-selector=\".copyright .mbr-text\" data-app-placeholder=\"Type Text\">\n                    © Copyright 2025 \n                    <a href=\"\" class=\"text-white link-text\">\n                        Mobirise\n                    </a>  -\n                    All Rights Reserved\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "t8bZ9swwyk",
+          "_anchor": "footer2-k",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footer",
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            }
+          },
+          "_name": "footer3",
+          "_sourceTheme": "trainingamp",
+          "_customHTML": "<section class=\"Footers3\" group=\"Footers\" plugins=\"amp-main\" global once=\"footer\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <!--  -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <!--  -->\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"@ADDONS_PATH@/trainingamp/components/_images/background4.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#2ca438\" selected>\n        </fieldset>\n        <!--  -->\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\"\n            condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\"\n            condition=\"bg.type!='color' && overlay\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container\">\n        <div class=\"copyright mbr-flex mbr-jc-c\">\n            <p class=\"mbr-text mbr-fonts-style mbr-regular mbr-white align-center\" mbr-theme-style=\"display-7\"\n                data-app-selector=\".copyright .mbr-text\" data-app-placeholder=\"Type Text\">© Copyright <span\n                    mbr-link-type=\"year\">2025 Mobirise</span></p>\n        </div>\n    </div>\n</section>",
+          "_cid": "t8bZctZEt1",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footer",
+          "_params": {},
+          "_anchor": "footer3-m"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 10px)",
+            "padding-bottom": "(@paddingBottom * 10px)",
+            "background-color": "@bg",
+            "& when (@showmenu)": {
+              ".fLink": {
+                "margin": "10px",
+                "transition": "opacity .3s ease",
+                "&:hover": {
+                  "opacity": "1"
+                }
+              }
+            },
+            ".copyright, .fLink": {
+              "opacity": ".75"
+            },
+            ".footer-container": {
+              "align-items": "center",
+              "& when (@showCopyright) and (@showmenu)": {
+                "justify-content": "space-between"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".footer-container": {
+                "justify-content": "center",
+                "flex-direction": "column",
+                "flex-wrap": "wrap"
+              },
+              ".link-items": {
+                "justify-content": "center",
+                "flex-direction": "column",
+                "margin-bottom": "10px"
+              },
+              ".divider__foot when (@showmenu) and (@showCopyright)": {
+                "border-top": "1px solid contrast(@bg)",
+                "opacity": ".15",
+                "width": "100%",
+                "margin-top": "19px",
+                "margin-bottom": "19px"
+              }
+            }
+          },
+          "_name": "footer2",
+          "_sourceTheme": "innovationamp",
+          "_customHTML": "<section class=\"footer2\" group=\"Footers\" plugins=\"amp-main\" global always-bottom>\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n\n        <input type=\"checkbox\" title=\"Show Copyright\" name=\"showCopyright\" checked>\n        <input type=\"checkbox\" title=\"Show Menu\" name=\"showmenu\" checked>\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\" checked>\n           <input type=\"range\" inline title=\"Items Count\" name=\"itemsCount\" min=\"1\" max=\"8\" step=\"1\" value=\"4\">\n        <!-- Background -->\n        <input type=\"color\" title=\"Background Color\" name=\"bg\" value=\"#122947\">\n    </mbr-parameters>\n    \n    <div class=\"footer-container container mbr-flex\" mbr-class=\"{\n                     'mbr-jc-c': !showCopyright || !showmenu,\n                     'mbr-row-reverse': reverseContent}\">\n                <div mbr-list mbr-list-grow=\"itemsCount\" class=\"mbr-row link-items mbr-fonts-style align-center\" mbr-theme-style=\"display-4\" mbr-if=\"showmenu\">\n            <p class=\"mbr-white fLink mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".fLink\">Home</p>\n            <p class=\"mbr-white fLink mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".fLink\">Quick Links</p>\n            \n            \n         <p class=\"mbr-white fLink mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".fLink\">Page Links</p><p class=\"mbr-white fLink mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".fLink\">Links</p></div>\n       \n            <div class=\"divider__foot\"></div>\n            <div class=\"align-center\" mbr-if=\"showCopyright\">\n                <p class=\"mbr-fonts-style copyright mbr-white\" mbr-theme-style=\"display-4\" data-app-selector=\".copyright\" data-app-placeholder=\"Type Text\">\n                    © Copyright 2025 Mobirise - All Rights Reserved\n                </p>\n            </div>\n     </div>\n\n</section>",
+          "_cid": "t8bZaycRNb",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": false,
+          "_params": {},
+          "_anchor": "footer2-l"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".footer-container": {
+              "justify-content": "space-between"
+            },
+            ".fLink": {
+              "display": "inline"
+            },
+            ".iconfont-wrapper": {
+              "display": "inline-flex",
+              "justify-content": "center",
+              "align-items": "center",
+              "padding": "3px",
+              "border-radius": "5px",
+              "background-color": "#ffffff"
+            },
+            ".amp-iconfont": {
+              "color": "@iconsColor",
+              "vertical-align": "middle",
+              "font-size": "1.2rem",
+              "width": "1.2rem"
+            },
+            ".icons-list": {
+              "padding-left": "48px"
+            },
+            "@media (max-width: 768px)": {
+              ".mbr-custom-flex": {
+                "flex-direction": "column",
+                "text-align": "center"
+              },
+              ".footer-container": {
+                "text-align": "center"
+              },
+              ".icons-list": {
+                "padding-left": "0",
+                "padding-top": "0.5rem"
+              }
+            }
+          },
+          "_name": "footer1",
+          "_sourceTheme": "corporateamp",
+          "_customHTML": "<section class=\"footer1\"\n    group=\"Footers\"\n    plugins=\"amp-main\"\n    global>\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <header>Size</header>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Items\" name=\"showItems\" checked>\n    <input type=\"range\" inline title=\"Items Count\" name=\"itemsCount\" min=\"1\" max=\"7\" step=\"1\" value=\"2\" condition=\"showItems\">\n    <header>Icons</header>\n\t<input type=\"checkbox\" title=\"Show Social\" name=\"showSocial\" checked required>\n\t<input type=\"range\" inline title=\"Count\" name=\"socialCount\" min=\"1\" max=\"10\" value=\"3\" step=\"1\" condition=\"showSocial\">\n    <input type=\"color\" title=\"Icons Color\" name=\"iconsColor\" value=\"#000000\" condition=\"showSocial\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\">\n        <input type=\"image\" title=\"Background Image\" value=\"@ADDONS_PATH@/corporateamp/components/_images/background4.jpg\">\n        <input type=\"color\" title=\"Background Color\" value=\"#1e1e20\" selected>\n    </fieldset>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' && overlay\">\n    <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-row footer-container\">\n            <div class=\"logo-box mbr-col-sm-12\">\n                <a class=\"mbr-white\"\n                    mbr-theme-style=\"display-7\"\n                    data-app-selector=\"\"\n                    href=\"#\"\n                    mbr-link-type=\"name\">CORPORATE</a>\n            </div>\n            <div class=\"mbr-flex mbr-custom-flex mbr-col-sm-12\">\n                <div mbr-list mbr-list-grow=\"itemsCount\" class=\"link-items mbr-fonts-style\" mbr-if=\"showItems\" mbr-theme-style=\"display-7\">\n                    <p class=\"mbr-text fLink mbr-px-1 mbr-white\" data-app-selector=\".fLink\">Home</p>\n                    <p class=\"mbr-text fLink mbr-px-1 mbr-white\" data-app-selector=\".fLink\">About Us</p>\n                    <p class=\"mbr-text fLink mbr-px-1 mbr-white\" data-app-selector=\".fLink\">Services</p>\n                    <p class=\"mbr-text fLink mbr-px-1 mbr-white\" data-app-selector=\".fLink\">Contacts</p>\n                    <p class=\"mbr-text fLink mbr-px-1 mbr-white\" data-app-selector=\".fLink\">Share Us</p>\n                </div>\n                <div class=\"icons-list\"\n\t\t\t\t\t mbr-if=\"showSocial\"\n\t\t\t\t\t mbr-list mbr-list-grow=\"socialCount\"\n\t\t\t\t\t mbr-link-type=\"socials\">\n                    <a href=\"#\" target=\"_blank\" class=\"iconfont-wrapper\">\n\t\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-linkedin fa\"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t<a href=\"#\" target=\"_blank\" class=\"iconfont-wrapper\">\n\t\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-facebook fa\"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t<a href=\"#\" target=\"_blank\" class=\"iconfont-wrapper\">\n\t\t\t\t\t\t<span mbr-icon class=\"amp-iconfont fa-instagram fa\"></span>\n\t\t\t\t\t</a>\n\t\t\t    </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "t8bZdMm4W0",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": false,
+          "_params": {},
+          "_anchor": "footer1-n"
         }
       ]
     }
