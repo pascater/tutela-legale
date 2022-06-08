@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "reclami.html",
+    "currentPage": "termini-condizioni.html",
     "theme": {
       "name": "simpleamp",
       "title": "SimpleAMP",
@@ -1534,443 +1534,6 @@
         }
       ]
     },
-    "page3.html": {
-      "settings": {
-        "title": "Page 3",
-        "order": 3
-      },
-      "components": [
-        {
-          "alias": false,
-          "_styles": {
-            "background-color": "@menuBgColor",
-            "overflow": "visible",
-            ".navbar": {
-              "background": "@menuBgColor"
-            },
-            "section": {
-              "padding": "0 !important"
-            },
-            "section.menu, .menu-container": {
-              "min-height": "50px !important"
-            },
-            "& when not (@showBrand) and not (@showLogo)": {
-              ".navbar > .container, .navbar > .container-fluid": {
-                "justify-content": "flex-end !important"
-              }
-            },
-            "& when (@showLogo)": {
-              ".navbar-brand": {
-                ".navbar-logo": {
-                  "amp-img, img": {
-                    "width": "~\"@{logoWidth}px\"",
-                    "height": "~\"@{logoHeight}px\"",
-                    "object-fit": "contain"
-                  }
-                }
-              }
-            },
-            "& when (@showBrand)": {
-              ".navbar-caption": {
-                "line-height": "inherit !important"
-              }
-            },
-            ".navbar .navbar-collapse": {
-              "@media (max-width: 991px)": {
-                "background": "@menuBgColor",
-                "& when (@sidebarSide = 'left')": {
-                  "right": "auto",
-                  "left": "0"
-                }
-              }
-            },
-            "& when (@showItems)": {
-              ".nav-link": {
-                "height": "70px",
-                "margin": ".667em 1em !important",
-                "margin-top": "0",
-                "margin-bottom": "0",
-                "padding": "0 !important",
-                "transition": "0.3s",
-                "&:hover": {
-                  "color": "@primaryColor"
-                }
-              },
-              ".dropdown-item.active, .dropdown-item:active": {
-                "background-color": "transparent"
-              },
-              ".dropdown-menu": {
-                "margin-top": "0",
-                "background": "@menuBgColor",
-                "border-top": "2px solid @primaryColor",
-                "box-shadow": "0 6px 12px rgba(0, 0, 0, 0.175)",
-                "transition": "all 0.3s",
-                ".dropdown-item": {
-                  "justify-content": "flex-start !important"
-                },
-                ".dropdown-item:hover": {
-                  "padding-left": "40px"
-                },
-                "a:hover": {
-                  "color": "@primaryColor"
-                }
-              }
-            },
-            ".hamburger span": {
-              "background-color": "@hamburgerColor"
-            },
-            ".builder-sidebar": {
-              "background-color": "@menuBgColor"
-            },
-            ".close-sidebar": {
-              "&:focus": {
-                "outline": "2px auto @primaryColor"
-              },
-              "span": {
-                "background-color": "@hamburgerColor"
-              }
-            },
-            "& when (@showSocial)": {
-              "& when (@showItems)": {
-                ".menu-social-list": {
-                  "@media (min-width: 992px)": {
-                    "padding-left": "1rem"
-                  },
-                  "@media (max-width: 991px)": {
-                    "padding-top": ".5rem"
-                  }
-                }
-              },
-              "& when (@showButtons)": {
-                ".menu-social-list": {
-                  "@media (max-width: 991px)": {
-                    "padding-bottom": ".5rem"
-                  }
-                }
-              }
-            },
-            ".iconfont-wrapper": {
-              "height": "1.3rem",
-              "width": "1.3rem",
-              "display": "inline-block",
-              ".amp-iconfont": {
-                "vertical-align": "middle",
-                "font-size": "1.3rem",
-                "width": "1.3rem",
-                "color": "@iconsColor"
-              }
-            },
-            ".btn": {
-              "padding": "5px 30px"
-            }
-          },
-          "_name": "menu1",
-          "_customHTML": "<section class=\"menu1 menu horizontal-menu\" group=\"Menu\" plugins=\"DropDown, amp-main, amp-sidebar\" always-top=\"\" global=\"\" once=\"menu\">\n\t<mbr-parameters>\n\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t<!--  -->\n\t<header>Size</header>\n\t<input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked=\"\">\n\t<input type=\"checkbox\" title=\"Sticky Position\" name=\"sticky\">\n\t<!--  -->\n\t<header>Show/Hide</header>\t\n\t<input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked=\"\">\n\t<input type=\"range\" title=\"Logo Height\" inline=\"\" name=\"logoHeight\" min=\"30\" max=\"200\" value=\"62\" step=\"1\" condition=\"showLogo\">\n\t<input type=\"range\" title=\"Logo Width\" inline=\"\" name=\"logoWidth\" min=\"30\" max=\"200\" value=\"200\" step=\"1\" condition=\"showLogo\">\n\t<input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\">\n\t<input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\" checked=\"\">\n\t<input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\" checked=\"\">\n\t<header>Icons</header>\n\t<input type=\"checkbox\" title=\"Show Social\" name=\"showSocial\" checked=\"\">\n\t<input type=\"range\" inline=\"\" title=\"Icons Count\" name=\"socialCount\" min=\"1\" max=\"6\" value=\"5\" step=\"1\" condition=\"showSocial\">\n\t<input type=\"color\" title=\"Icons Color\" name=\"iconsColor\" value=\"#2e7d32\">\n\t<header>Sidebar</header>\n\t<select title=\"Side\" name=\"sidebarSide\">\n\t\t<option value=\"left\">Left</option>\n\t\t<option value=\"right\" selected=\"\">Right</option>\n\t</select>\n\t<input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#43a047\">\n\t<header>Background</header>\n\t<input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#ffffff\" required=\"\">\n\t<!-- End block parameters -->\n\t</mbr-parameters>\n\t<!-- <div class=\"menu-wrapper\"> -->\n\t<nav class=\"navbar navbar-dropdown navbar-expand-lg navbar-short\" mbr-class=\"{'navbar-fixed-top': sticky}\">\n\t\t<div class=\"menu-container\" mbr-class=\"{'container': !fullWidth,\n\t\t\t\t\t\t'container-fluid': fullWidth,\n\t\t\t\t\t\t'mbr-jc-e': !showLogo &amp;&amp; !showBrand}\">\n\t\t\t<!-- SHOW LOGO -->\n\t\t\t<div class=\"navbar-brand\" mbr-if=\"showLogo || showBrand\">\n\t\t\t\t<div mbr-if=\"showLogo\" class=\"navbar-logo\">\n\t\t\t\t\t<amp-img src=\"@PROJECT_PATH@/assets/images/tutela-legale-logo-16-9-400x225.png\" layout=\"responsive\" height=\"62\" width=\"364.7058823529412\" alt=\"image\" class=\"mobirise-loader\">\n\t\t\t\t\t\t<div placeholder=\"\" class=\"placeholder\"></div>\n\t\t\t\t\t\t<img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/tutela-legale-logo-16-9-400x225.png\" alt=\"\" data-aspectratio=\"0.165\">\n\t\t\t\t\t</amp-img>\n\t\t\t\t</div>\n\t\t\t\t<span mbr-if=\"showBrand\" mbr-buttons=\"\" mbr-theme-style=\"display-5\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\">\n\t\t\t\t\t<a class=\"navbar-caption mbr-bold text-black\" data-app-selector=\".navbar-caption\" href=\"#\" mbr-link-type=\"name\">Minimal</a>\n\t\t\t\t</span>\n\t\t\t</div>\n\t\t\t<!-- SHOW LOGO END -->\n\t\t\t<!-- COLLAPSED MENU -->\n\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n\t\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems || showSocial || showButtons\">\n\t\t\t\t<div class=\"hamburger\">\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t</div>\n\t\t\t\t</button>\n\t\t\t\t<!-- NAVBAR ITEMS -->\n\t\t\t\t<ul mbr-menu=\"\" class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-4\" mbr-if=\"showItems\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish &amp;&amp; !showBrand &amp;&amp; !showLogo}\"><li class=\"nav-item dropdown\">\n\t\t\t\t\t\t<a class=\"nav-link link mbr-bold text-black\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-toggle=\"dropdown-submenu\" aria-expanded=\"false\" data-app-placeholder=\"Type Text\">Home</a>\n\t\t\t\t\t\t<div class=\"dropdown-menu\">\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"nav-item dropdown\">\n\t\t\t\t\t\t<a class=\"nav-link mbr-bold link text-black\" href=\"#\" data-toggle=\"dropdown-submenu\" data-app-selector=\".nav-link,.dropdown-item\" aria-expanded=\"true\" data-app-placeholder=\"Type Text\">About Us</a>\n\t\t\t\t\t\t<div class=\"dropdown-menu\">\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"nav-item dropdown\">\n\t\t\t\t\t\t<a class=\"nav-link mbr-bold link text-black\" href=\"#\" data-toggle=\"dropdown-submenu\" data-app-selector=\".nav-link,.dropdown-item\" aria-expanded=\"false\" data-app-placeholder=\"Type Text\">Contacts</a>\n\t\t\t\t\t\t<div class=\"dropdown-menu\">\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"nav-item dropdown\">\n\t\t\t\t\t\t<a class=\"nav-link mbr-bold link text-black\" href=\"#\" data-toggle=\"dropdown-submenu\" data-app-selector=\".nav-link,.dropdown-item\" aria-expanded=\"false\" data-app-placeholder=\"Type Text\">FAQ</a>\n\t\t\t\t\t\t<div class=\"dropdown-menu\">\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li></ul>\n\t\t\t\t<!-- NAVBAR ITEMS END -->\n\t\t\t\t<!-- SOCIAL ICON -->\n\t\t\t\t<div class=\"menu-social-list\" mbr-if=\"showSocial\" mbr-list=\"\" mbr-list-grow=\"socialCount\" mbr-link-type=\"socials\">\n\t\t\t\t\t<a href=\"#\" target=\"_blank\" class=\"iconfont-wrapper\">\n\t\t\t\t\t\t<span mbr-icon=\"\" class=\"amp-iconfont animation-normal fa-twitter fa\"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t<a href=\"#\" target=\"_blank\" class=\"iconfont-wrapper\">\n\t\t\t\t\t\t<span mbr-icon=\"\" class=\"amp-iconfont animation-normal fa-facebook fa\"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t<a href=\"#\" target=\"_blank\" class=\"iconfont-wrapper\">\n\t\t\t\t\t\t<span mbr-icon=\"\" class=\"amp-iconfont animation-normal fa-telegram fa\"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t<a href=\"#\" target=\"_blank\" class=\"iconfont-wrapper\">\n\t\t\t\t\t\t<span mbr-icon=\"\" class=\"amp-iconfont animation-normal fa-linkedin fa\"></span>\n\t\t\t\t\t</a><a href=\"#\" target=\"_blank\" class=\"iconfont-wrapper\">\n\t\t\t\t\t\t<span mbr-icon=\"\" class=\"amp-iconfont animation-normal fa-youtube fa\"></span>\n\t\t\t\t\t</a></div>\n\t\t\t\t<!-- SOCIAL ICON END -->\n\t\t\t\t<!-- SHOW BUTTON -->\n\t\t\t\t<div mbr-if=\"showButtons\" mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"navbar-buttons mbr-section-btn\"><a class=\"btn btn-md btn-black mbr-bold\" href=\"index.html#contacts5-2\" data-app-placeholder=\"Type Text\">Contatto</a></div>\n\t\t\t\t<!-- SHOW BUTTON END -->\n\t\t\t</div>\n\t\t\t<!-- COLLAPSED MENU END -->\n\t\t\t<button class=\"navbar-toggler hide\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems || showSocial || showButtons\">\n\t\t\t<div class=\"hamburger\">\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t</div>\n\t\t\t</button>\n\t\t\t<button on=\"tap:sidebar.toggle\" class=\"ampstart-btn hamburger\" mbr-if=\"(showItems||showButtons)\">\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t</button>\n\t\t</div>\n\t</nav>\n\t<!-- AMP plug -->\n\t<amp-sidebar id=\"sidebar\" layout=\"nodisplay\" side=\"{{sidebarSide}}\">\n\t\t<div class=\"builder-sidebar\" id=\"builder-sidebar\">\n\t\t\t<button on=\"tap:sidebar.close\" class=\"close-sidebar\">\n\t\t\t<span></span>\n\t\t\t<span></span>\n\t\t\t</button>\n\t\t</div>\n\t</amp-sidebar>\n\t<!-- </div> -->\n</section>",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": [],
-          "_cid": "t8cfknYPHX",
-          "_protectedParams": [],
-          "_global": true,
-          "_once": "menu",
-          "_params": {},
-          "_anchor": "menu1-w"
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)",
-              ".mbr-overlay": {
-                "background-color": "@overlayColor",
-                "opacity": "@overlayOpacity"
-              }
-            },
-            ".card-box": {
-              "width": "100%",
-              "& when (@cardBgOn)": {
-                "padding": "50px 30px",
-                "@media (max-width: 767px)": {
-                  "padding": "30px 20px"
-                },
-                "background-color": "@cardBg"
-              }
-            },
-            ".img-box": {
-              "height": "350px"
-            },
-            "img, amp-img": {
-              "object-fit": "cover"
-            },
-            ".text-box": {
-              "padding": "20px 0px"
-            },
-            ".text-upper": {
-              "text-transform": "uppercase"
-            },
-            ".title-box": {
-              "padding-left": "30px",
-              "margin-left": "30px",
-              "border-left": "2px solid @dateBorderColor",
-              "& when not (@showDate)": {
-                "margin-left": "0"
-              }
-            },
-            ".iconfont-wrapper": {
-              "width": "~\"@{iconsSize}rem\"",
-              "height": "~\"@{iconsSize}rem\"",
-              "display": "inline-flex",
-              "justify-content": "center",
-              "align-items": "center",
-              "margin-right": "10px"
-            },
-            ".amp-iconfont": {
-              "font-size": "~\"@{iconsSize}rem\"",
-              "width": "~\"@{iconsSize}rem\"",
-              "color": "@primaryColor"
-            },
-            ".tag-text": {
-              "display": "inline",
-              "padding-top": "0.5rem",
-              "margin-right": "25px",
-              "&:last-child": {
-                "margin-right": "0"
-              }
-            },
-            ".custom-link a": {
-              "text-transform": "uppercase",
-              "position": "relative"
-            },
-            ".custom-link a::after, .custom-link a::before": {
-              "position": "absolute",
-              "display": "block",
-              "content": "\"\"",
-              "transition": "0.5s",
-              "right": "-33px"
-            },
-            ".custom-link a::after": {
-              "width": "20px",
-              "height": "2px",
-              "top": "~\"calc(50% - 1px)\"",
-              "background": "@arrColor"
-            },
-            ".custom-link a::before": {
-              "width": "6px",
-              "height": "6px",
-              "top": "~\"calc(50% - 3px)\"",
-              "border": "1px solid @arrColor",
-              "border-bottom": "none",
-              "border-left": "none",
-              "transform": "rotate(45deg)"
-            },
-            ".custom-link:hover": {
-              "a::after": {
-                "transform": "translateX(10px)"
-              },
-              "a::before": {
-                "transform": "translateX(10px) rotate(45deg)"
-              }
-            },
-            ".mbr-ai-c": {
-              "align-items": "center"
-            },
-            ".custom-mr": {
-              "margin-right": "45px"
-            }
-          },
-          "_name": "features8",
-          "_sourceTheme": "simpleamp",
-          "_customHTML": "<section class=\"features8\" group=\"Article\" plugins=\"amp-main\">\n    <mbr-parameters>\n    <header>Size</header>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <header>Title</header>\n    <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n    <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n    <select title=\"Align\" name=\"titleAlign\" condition=\"showTitle || showSubtitle\">\n        <option value=\"1\">Left</option>\n        <option value=\"2\" selected>Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <header>Cards</header>\n    <select title=\"Align\" name=\"cardsAlign\">\n        <option value=\"1\" selected>Left</option>\n        <option value=\"2\">Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <input type=\"checkbox\" title=\"Show Date\" name=\"showDate\" checked>\n    <input type=\"checkbox\" title=\"Show Title\" name=\"showCardsTitle\" checked>\n    <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked>\n    <input type=\"range\" title=\"Icons Count\" name=\"iconsAmount\" min=\"1\" max=\"2\" value=\"2\" condition=\"showIcons\">\n    <input type=\"range\" title=\"Icons Size\" name=\"iconsSize\" min=\"1\" max=\"2\" step=\"0.1\" value=\"1\" condition=\"showIcons\">\n    <input type=\"checkbox\" title=\"Show Image\" name=\"showImage\">\n    <input type=\"checkbox\" title=\"Show Text\" name=\"showCardsText\" checked>\n    <input type=\"checkbox\" title=\"Show Links\" name=\"showCardsLinks\">\n    <input type=\"color\" title=\"Date Border Color\" name=\"dateBorderColor\" value=\"#000000\" condition=\"showDate || showCardsTitle || showIcons\">\n    <input type=\"color\" title=\"Links Arrow Color\" name=\"arrColor\" value=\"#000000\" condition=\"showCardsLinks\">\n    <input type=\"checkbox\" title=\"Card Bg\" name=\"cardBgOn\">\n    <input type=\"color\" title=\"Color\" name=\"cardBg\" value=\"#f6f9f8\" condition=\"cardBgOn\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" required>\n        <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n    </fieldset>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type == 'image'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div mbr-class=\"{'container':!fullWidth,\n                     'container-fluid':fullWidth}\">\n        <div class=\"mbr-row mbr-jc-c mbr-pb-5\" mbr-class=\"{'align-center': titleAlign==2,\n                         'align-right': titleAlign==3}\" mbr-if=\"showTitle || showSubtitle\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12\">\n                <h3 class=\"mbr-fonts-style mbr-bold text-upper line-title mbr-pb-4\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\">Our News</h3>\n                <h4 class=\"mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure consequatur voluptates, rerum explicabo ex recusandae!</h4>\n            </div>\n        </div>\n        <div class=\"mbr-row mbr-jc-c mbr-ai-c\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-10\">\n                <div class=\"card-box-wrapper\">\n                    <div class=\"card-box\" mbr-class=\"{'align-center': cardsAlign==2,\n                                     'align-right': cardsAlign==3}\">\n                        <div class=\"mbr-flex mbr-pb-3\" mbr-if=\"showDate || showCardsTitle || showIcons\">\n                            <div class=\"date-box\" mbr-if=\"showDate\">\n                                <p class=\"mbr-fonts-style mbr-bold custom-card-date\" mbr-theme-style=\"display-1\" data-app-selector=\".custom-card-date\">22</p>\n                                <p class=\"mbr-fonts-style mbr-bold custom-card-date\" mbr-theme-style=\"display-7\" data-app-selector=\".custom-card-date\">Luglio 2022</p>\n                            </div>\n                            <div class=\"title-box\" mbr-if=\"showCardsTitle || showIcons\">\n                                <h3 class=\"mbr-fonts-style mbr-bold custom-card-title\" mbr-theme-style=\"display-2\" mbr-if=\"showCardsTitle\" data-app-selector=\".custom-card-title\">Informativa vendita a distanza</h3>\n                                <div>\n                                <div mbr-if=\"showIcons\">\n                                <div class=\"iconfont-wrapper\">\n                                    <span mbr-icon class=\"amp-iconfont animation-normal mobi-mbri-new-file mobi-mbri\"></span>\n                                </div>\n                                <p class=\"mbr-fonts-style tag-text\" mbr-theme-style=\"display-4\"></p>\n                                <div class=\"iconfont-wrapper\" mbr-if=\"iconsAmount > 1\">\n                                    <span mbr-icon class=\"amp-iconfont animation-normal fa fa-user\"></span>\n                                </div>\n                                <p class=\"mbr-fonts-style tag-text\" mbr-theme-style=\"display-4\" mbr-if=\"iconsAmount > 1\"></p>\n                                </div>\n                            </div>\n                            </div>\n                        </div>\n                        <div class=\"img-box\" mbr-if=\"showImage\">\n                            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/background8.jpg\" layout=\"responsive\" height=\"9\" width=\"16\" alt=\"image\">\n                                <div placeholder class=\"placeholder\"></div>\n                                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/background8.jpg\" alt>\n                            </amp-img>\n                        </div>\n                        <div class=\"text-box\" mbr-if=\"showCardsText || showCardsLinks\">\n                            <p class=\"mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showCardsText\"><br>INFORMATIVA AI SENSI DEL REGOLAMENTO IVASS N. 40 DEL 2 AGOSTO 2018 IN CASO DI PROMOZIONE E COLLOCAMENTO A DISTANZA DI CONTRATTI DI ASSICURAZIONE\n<br>\n<br>Premessa:\n<br>\n<br>Il contratto di assicurazione è distribuito per il tramite l'intermediario autorizzato Agente Generale Pasquale Caterisano, tramite tecniche di comunicazione a distanza, attraverso l’utilizzo della piattaforma on-line www.tutela-legane.net e www.arag.it, accessibili da Internet su dispositivi fissi e mobili.\n<br>\n<br>Per “tecnica di comunicazione a distanza” si intende qualunque modalità di contatto con la clientela che, senza la presenza fisica e simultanea del distributore e del contraente, possa essere impiegata per il collocamento a distanza di contratti assicurativi e riassicurativi.\n<br>\n<br>Per “supporto durevole” si intende qualsiasi strumento che permetta al contraente di memorizzare informazioni a lui personalmente dirette, in modo che siano accessibili per la futura consultazione durante un periodo di tempo adeguato ai fini cui sono destinate le informazioni stesse e che ne consenta la riproduzione inalterata.\n<br>\n<br>Tale informativa risponde all’esigenza di rendere edotto il Contraente dei diritti e delle facoltà riconosciutigli a fronte della tecnica di commercializzazione utilizzata, ciò al fine di garantire un livello adeguato di informazione sia prima che dopo la conclusione del contratto.\n<br>\n<br>Modalità di trasmissione della documentazione\n<br>\n<br>Sulla base della scelta effettuata dal Contraente, la documentazione precontrattuale e contrattuale può essere fornita con una delle seguenti modalità:\n<br>\n<br>su supporto durevole non cartaceo, ossia con la messa a disposizione della documentazione sul sito&nbsp;www.tutela-legane.net e www.arag.it eventualmente e su richiesta, in formato cartaceo (senza oneri aggiuntivi).\n<br>\n<br>Qualora il Contraente abbia scelto la prima modalità, potrà in ogni caso richiedere successivamente l’invio di tale documentazione in formato cartaceo, senza che ciò comporti alcun onere a suo carico.<br>\n<br>La scelta effettuata dal Contraente prima della sottoscrizione della Polizza avrà valore anche per le eventuali comunicazioni previste dalla normativa vigente da inviarsi in corso di contratto.\n<br>\n<br>Il Contraente potrà, in qualsiasi momento, modificare la modalità di comunicazione utilizzata, modificando le preferenze selezionate nella sua area personale, sempre accessibile sul sito&nbsp;www.tutela-legane.net e www.arag.it e richiedere la trasmissione della documentazione o in formato cartaceo oppure in formato elettronico.\n<br>\n<br>Tale scelta da parte del Contraente si applicherà solo alle future comunicazioni.\n<br>\n<br>Nel caso il Contraente opti per l’invio della documentazione contrattuale in formato cartaceo questa sarà trasmessa al Contraente entro 5 giorni dalla conclusione del contratto, ossia dalla sottoscrizione della polizza e pagamento del premio o della prima rata dello stesso.\n<br>\n<br>Il Contraente dovrà procedere alla sottoscrizione di una copia della Polizza e del Questionario per la valutazione delle richieste ed esigenze e ritrasmettere tale documentazione - allegando altresì copia del proprio documento di identità - all’Intermediario mediante invio di posta elettronica all'indirizzo: info@tuela-legale.net oppure mediante invio per posta a Xure.it di Pasquale Caterisano, via Pietro Valsecchi, 2- 22033 Asso (CO)\n<br>\n<br>Sistema di sottoscrizione e trasmissione/archiviazione del contratto in formato elettronico\n<br>\n<br>Il documento emesso in forma elettronica deve essere firmato dal contraente con Firma Elettronica Avanzata in modalità remota via cellulare.\n<br>\n<br>Il processo di firma da completarsi dopo la verifica dei dati di pagamento e il vincolo delle somme dovute, prevede i seguenti passaggi:\n<br>\n<br>1. Riconoscimento del contraente. Al contraente sarà richiesto di fare l’upload di una copia del documento d’identità valido.\n<br>2. Emissione del fascicolo finale di polizza con tutti i documenti che richiedono la firma. I documenti saranno disponibili a video con in evidenza tutte le sezioni che richiedono la firma elettronica. I documenti emessi saranno disponibili in 4 copie; una per il cliente, una per la compagnia e 2 per gli intermediari.\n<br>3. Invio via SMS al contraente di un codice di firma univoco.\n<br>4. Firma del documento. Al contraente sarà richiesto di digitare il codice ricevuto in ogni campo del documento che richiede la firma.\n<br>5. Completamento transazione di pagamento.\n<br>6. Inoltro del documento firmato in copia al cliente e alla compagnia.\n<br>7. Archiviazione sostitutiva sui sistemi di ARAG come previsto dalla legge.\n<br>Copia del documento firmato sarà inoltre sempre disponibile al contraente nell’archivio delle polizze di AFI-ESCA.\n<br>\n<br>Maggiori dettagli sugli aspetti tecnico-legali e modalità di Firma Elettronica sono disponibili sul sito del fornitore di firma Elettronica: TI Trust Technologies Srl al sito https://www.trusttechnologies.it/\n<br>\n<br>Adeguata verifica avanzata: Compliance interna della Compagnia\n<br>\n<br>Modalità di pagamento\n<br>\n<br>Il premio, comprensivo di imposte, può essere pagato con carta di credito e di debito dei principali circuiti internazionali (VISA, MASTERCARD, MAESTRO), PayPal, e più di 30 sistemi di pagamento elettronici disponibili sul Gateway di Pagamento del fornitore del suddetto servizio: ComNpay – by Afone Paiement\n<br>\n<br>L’utente seleziona la modalità di pagamento e fornisce i dati prima dell’emissione e firma della polizza. ComNpay – by Afone Paiement provvede a verificare gli estremi del pagamento e vincolare le somme dovute. Effettuata la firma elettronica, come descritto al punto precedente, il sistema completa automaticamente la transazione.\n<br>\n<br>Le caratteristiche essenziali e le condizioni di sicurezza delle operazioni di pagamento sono riportate sul sito: https://comnpay.com/it/\n<br>\n<br>Diritto di Recesso \n<br>\n<br>Modalità e termini di esercizio:\n<br>È data facoltà al Contraente di recedere dal contratto di assicurazione, se tale diritto esiste in base a quanto previsto nella documentazione contrattuale, inviando una PEC all’indirizzo pasquale.caterisano@pec.it oppure con lettera raccomandata A/R a: Xure.it di Pasquale Caterisano, via Pietro Valsecchi, 2- 22033 Asso (CO)\n<br>\n<br>oppure\n<br>\n<br>all’ufficio preposto della Compagnia di Assicurazione che ha emesso il contratto di assicurazione, indicato nella documentazione contrattuale rilasciata al Contrante, entro 14 giorni dalla data di conclusione del contratto senza doverne indicare il motivo.\n<br>\n<br>Effetti del recesso\n<br>\n<br>Il recesso, esercitato nelle modalità e termini sopra previsti, avrà effetto dal giorno di ricevimento della comunicazione dello stesso da parte dell’Intermediario o dell’Impresa di Assicurazione.\n<br>\n<br>L’Impresa di Assicurazione trattiene la frazione di premio relativa al periodo intercorrente tra la data di effetto del contratto e la data di effetto del recesso e deve adempiere agli obblighi derivanti dal contratto di assicurazione concernenti tale periodo.\n<br>\n<br>L’Impresa di Assicurazione provvederà a restituire al Contraente, entro il termine previsto dalla documentazione contrattuale consegnata al momento della stipula del contratto di assicurazione, la frazione di premio pagato e non goduto, al netto delle imposte già versate, senza l’applicazione di alcuna penale.\n<br>\n<br>Conseguenze derivanti dal mancato esercizio del recesso\n<br>\n<br>Nel caso in cui il Contraente non eserciti il diritto di recesso entro i termini e le modalità previste, il contratto di assicurazione si intende efficace fino alla sua naturale scadenza ed il Contraente è tenuto al pagamento dei successivi premi, salva la facoltà di disdetta.\n<br>\n<br>Servizi di Post-vendita\n<br>\n<br>Tutti i servizi di postvendita (modifica condizioni di polizza, sinistri, etc.) saranno forniti dall'intermediario autorizzato Agente Generale Pasquale Caterisano, per via telefonica, email e/o posta. I recapiti per ciascun servizio richiesto e le modalità di contatto sono disponibili nella home page del sito&nbsp;www.tutela-legane.net e www.arag.it</p>\n                            <div class=\"custom-link link mbr-fonts-style mbr-bold mbr-black mbr-pt-3\" mbr-text mbr-theme-style=\"display-7\" mbr-if=\"showCardsLinks\" data-app-selector=\".custom-link\" mbr-class=\"{'custom-mr': cardsAlign == 3}\">\n                                <a href=\"#\" class=\"text-primary\">Read More</a></div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "t8cfkoDsnD",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {},
-          "_anchor": "features8-x"
-        },
-        {
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)",
-              ".mbr-overlay": {
-                "background-color": "@overlayColor",
-                "opacity": "@overlayOpacity"
-              }
-            },
-            ".link-items": {
-              ".fLink": {
-                "width": "auto"
-              }
-            },
-            "& when (@typeBlock = '1')": {
-              ".mbr-row": {
-                "margin": "0",
-                "& when (@showCopyright)": {
-                  "&:nth-child(1)": {
-                    "margin-bottom": "1rem"
-                  }
-                }
-              }
-            },
-            "& when (@typeBlock = '2')": {
-              ".footer-container": {
-                "& when (@showCopyright) and (@showItems)": {
-                  "@media (min-width: 992px)": {
-                    "justify-content": "space-between"
-                  },
-                  "@media (max-width: 991px)": {
-                    "flex-direction": "column",
-                    "align-items": "center"
-                  }
-                }
-              },
-              ".mbr-row": {
-                "width": "auto",
-                "@media (max-width: 992px)": {
-                  "padding": "0",
-                  "width": "100%",
-                  "justify-content": "center",
-                  "& when (@showCopyright)": {
-                    "&:nth-child(1)": {
-                      "margin-bottom": "1rem"
-                    }
-                  }
-                }
-              },
-              ".copyright": {
-                "width": "auto"
-              }
-            },
-            ".mbr-text-al-c": {
-              "text-align": "center"
-            },
-            ".iconfont-wrapper": {
-              "width": "~\"@{iconsSize}rem\"",
-              "height": "~\"@{iconsSize}rem\"",
-              "display": "inline-flex",
-              "padding": "15px 20px",
-              "margin-right": "15px",
-              "justify-content": "center",
-              "align-items": "center",
-              "border-radius": "3px",
-              "cursor": "pointer"
-            },
-            ".amp-iconfont": {
-              "font-size": "~\"@{iconsSize}rem\"",
-              "width": "~\"@{iconsSize}rem\"",
-              "color": "@primaryColor",
-              "vertical-align": "middle"
-            },
-            ".custom-bg-1": {
-              "transition": "0.5s",
-              "&:hover": {
-                "background-color": "@icon1Bg",
-                ".amp-iconfont": {
-                  "color": "white"
-                }
-              }
-            },
-            ".custom-bg-2": {
-              "transition": "0.5s",
-              "&:hover": {
-                "background-color": "@icon2Bg",
-                ".amp-iconfont": {
-                  "color": "white"
-                }
-              }
-            },
-            ".custom-bg-3": {
-              "transition": "0.5s",
-              "&:hover": {
-                "background-color": "@icon3Bg",
-                ".amp-iconfont": {
-                  "color": "white"
-                }
-              }
-            },
-            ".custom-bg-4": {
-              "transition": "0.5s",
-              "&:hover": {
-                "background-color": "@icon4Bg",
-                ".amp-iconfont": {
-                  "color": "white"
-                }
-              }
-            },
-            ".custom-bg-5": {
-              "transition": "0.5s",
-              "&:hover": {
-                "background-color": "@icon5Bg",
-                ".amp-iconfont": {
-                  "color": "white"
-                }
-              }
-            },
-            ".custom-bg-6": {
-              "transition": "0.5s",
-              "&:hover": {
-                "background-color": "@icon6Bg",
-                ".amp-iconfont": {
-                  "color": "white"
-                }
-              }
-            },
-            ".copyright .mbr-text": {
-              "text-align": "left"
-            },
-            "P": {
-              "text-align": "left"
-            },
-            ".fLink": {
-              "text-align": "left"
-            }
-          },
-          "_name": "footer2",
-          "_customHTML": "<section class=\"footer2\" group=\"Footers\" plugins=\"amp-main\" global once=\"footer\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <header>Size</header>\n    <select title=\"Block Type\" name=\"typeBlock\">\n        <option value=\"1\">Type 1</option>\n        <option value=\"2\" selected>Type 2</option>\n    </select>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Reverse Content\" name=\"reverseContent\" condition=\"typeBlock==2\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n    <!--  -->\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Items\" name=\"showItems\" checked>\n    <input type=\"range\" inline title=\"Items Count\" name=\"itemsCount\" min=\"1\" max=\"7\" step=\"1\" value=\"2\" condition=\"showItems\">\n    <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Copyright\" name=\"showCopyright\" checked>\n    <header>Icons</header>\n    <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked>\n    <input type=\"range\" title=\"Icons Count\" name=\"iconsAmount\" min=\"1\" max=\"6\" value=\"5\" condition=\"showIcons\">\n    <input type=\"range\" title=\"Icons Size\" name=\"iconsSize\" min=\"1\" max=\"2.5\" step=\"0.1\" value=\"1.7\" condition=\"showIcons\">\n    <input type=\"color\" title=\"Icon 1 BG\" name=\"icon1Bg\" value=\"#55acee\" condition=\"showIcons\">\n    <input type=\"color\" title=\"Icon 2 BG\" name=\"icon2Bg\" value=\"#e4405f\" condition=\"showIcons &amp;&amp; iconsAmount > 1\">\n    <input type=\"color\" title=\"Icon 3 BG\" name=\"icon3Bg\" value=\"#cd201f\" condition=\"showIcons &amp;&amp; iconsAmount > 2\">\n    <input type=\"color\" title=\"Icon 4 BG\" name=\"icon4Bg\" value=\"#3b5999\" condition=\"showIcons &amp;&amp; iconsAmount > 3\">\n    <input type=\"color\" title=\"Icon 5 BG\" name=\"icon5Bg\" value=\"#0088cc\" condition=\"showIcons &amp;&amp; iconsAmount > 4\">\n    <input type=\"color\" title=\"Icon 6 BG\" name=\"icon6Bg\" value=\"#4c75a3\" condition=\"showIcons &amp;&amp; iconsAmount > 5\">\n    <!--  -->\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\">\n        <input type=\"image\" title=\"Background Image\" value=\"@THEME_PATH@/components/_images/background4.jpg\">\n        <input type=\"color\" title=\"Background Color\" value=\"#d3ead4\" selected>\n    </fieldset>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' && overlay\">\n    <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"footer-container\" mbr-class=\"{'container': !fullWidth,\n                     'container-fluid': fullWidth,\n                     'mbr-jc-c': (!showCopyright || !showItems) && typeBlock==2,\n                     'mbr-flex': typeBlock==2,\n                     'mbr-row-reverse': reverseContent}\">\n        <div mbr-list mbr-list-grow=\"itemsCount\" class=\"mbr-row link-items mbr-jc-c mbr-fonts-style\" mbr-if=\"showItems\" mbr-theme-style=\"display-7\">\n            <p class=\"mbr-text fLink mbr-px-1 mbr-bold\" data-app-selector=\".fLink\">Informazioni di contatto e ufficio di rappresentanza:<br>\n<br><span style=\"font-weight: normal;\">Via Uberto Visconti di Modrone, 6 - 20122 Milano<br>\n<br><i>info@tutela-legale.net</i><br>+39 338 - 22 34 395</span></p>\n            \n            \n            \n            \n        <p class=\"mbr-text fLink mbr-px-1 mbr-bold\" data-app-selector=\".fLink\"><br>\n<br><br></p></div>\n        <div class=\"mbr-pt-3 mbr-pb-5 mbr-text-al-c\">\n            <p class=\"mbr-fonts-style mbr-pb-3\" mbr-theme-style=\"display-7\" mbr-if=\"showText\"><b>Tutela-legale.net è un marchio:</b><br>Xure.it di Pasquale Caterisano<br>Via Pietro Valsecchi, 2 - 22033 Asso (CO)\n<br>RUI A000055288  P. IVA 04012380137\n<br>PEC: pasquale.caterisano @ pec.it&nbsp;</p>\n            <div class=\"iconfont-wrapper custom-bg-1\" mbr-if=\"showIcons\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa-linkedin-square fa\"></span>\n            </div>\n            <div class=\"iconfont-wrapper custom-bg-2\" mbr-if=\"showIcons &amp;&amp; iconsAmount > 1\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-instagram\"></span>\n            </div>\n            <div class=\"iconfont-wrapper custom-bg-3\" mbr-if=\"showIcons &amp;&amp; iconsAmount > 2\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-youtube\"></span>\n            </div>\n            <div class=\"iconfont-wrapper custom-bg-4\" mbr-if=\"showIcons &amp;&amp; iconsAmount > 3\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-facebook\"></span>\n            </div>\n            <div class=\"iconfont-wrapper custom-bg-1\" mbr-if=\"showIcons &amp;&amp; iconsAmount > 4\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-twitter\"></span>\n            </div>\n            <div class=\"iconfont-wrapper custom-bg-2\" mbr-if=\"showIcons &amp;&amp; iconsAmount > 5\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-instagram\"></span>\n            </div>\n        </div>\n        <div class=\"copyright mbr-px-2 mbr-flex mbr-jc-c\" mbr-if=\"showCopyright\">\n            <p class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".copyright .mbr-text\" data-app-placeholder=\"Type Text\"><a href=\"https://www.iubenda.com/privacy-policy/13214559/legal\" class=\"text-primary\" target=\"_blank\">Privacy e Cookie Policy</a>\n<br><a href=\"assets/files/Allegati-3-4-4ter-xure.it-Pasquale-Caterisano.pdf\" class=\"text-primary\" target=\"_blank\">Allegato 3 ,  Allegato 4,  Allegato 4Ter\n</a><br><a href=\"https://www.arag.it/si/download/I/FP/FP/tradizionale_standard/IT\" class=\"text-primary\" target=\"_blank\">Set informativo</a>\n<br><a href=\"https://www.arag.it/si/download/I/FP/FP/tradizionale_standard/IT\" class=\"text-primary\" target=\"_blank\">Condizioni di polizza\n</a><br>Reclami<br>Normativa vendita a distanza<br>Termini e condizioni sito<br><br>Tutela-legale.net © Copyright 2025 - All Rights Reserved</p>\n        </div>\n    </div>\n</section>",
-          "_cid": "t8cfkpoRai",
-          "_protectedParams": [],
-          "_global": true,
-          "_once": "footer",
-          "_params": {},
-          "_anchor": "footer2-y"
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)",
-              ".mbr-overlay": {
-                "background-color": "@overlayColor",
-                "opacity": "@overlayOpacity"
-              }
-            }
-          },
-          "_name": "footer3",
-          "_sourceTheme": "trainingamp",
-          "_customHTML": "<section class=\"Footers3\" group=\"Footers\" plugins=\"amp-main\" global once=\"footer\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <!--  -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n        <!--  -->\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"@ADDONS_PATH@/trainingamp/components/_images/background4.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#9e9e9e\" selected>\n        </fieldset>\n        <!--  -->\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"bg.type!='color' && overlay\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container\">\n        <div class=\"copyright mbr-flex mbr-jc-c\">\n            <p class=\"mbr-text mbr-fonts-style mbr-regular mbr-white align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".copyright .mbr-text\" data-app-placeholder=\"Type Text\">This site is not a part of Facebook or Google websites.  Additionally, this site is NOT endorsed by Facebook or Google in any way.  Facebook is a trademark of Meta Platforms, Inc.  Google is a trademark of Alphabet Inc.</p>\n        </div>\n    </div>\n</section>",
-          "_cid": "t8cfkpVt9u",
-          "_protectedParams": [],
-          "_global": true,
-          "_once": "footer",
-          "_params": {},
-          "_anchor": "footer3-z"
-        }
-      ]
-    },
     "reclami.html": {
       "settings": {
         "title": "Reclami",
@@ -2405,6 +1968,444 @@
           "_once": "footer",
           "_params": {},
           "_anchor": "footer3-v"
+        }
+      ]
+    },
+    "termini-condizioni.html": {
+      "settings": {
+        "title": "Termini e condizioni Tutela-legale.net",
+        "order": 3,
+        "meta_descr": "Termini e condizioni tutela legale"
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@menuBgColor",
+            "overflow": "visible",
+            ".navbar": {
+              "background": "@menuBgColor"
+            },
+            "section": {
+              "padding": "0 !important"
+            },
+            "section.menu, .menu-container": {
+              "min-height": "50px !important"
+            },
+            "& when not (@showBrand) and not (@showLogo)": {
+              ".navbar > .container, .navbar > .container-fluid": {
+                "justify-content": "flex-end !important"
+              }
+            },
+            "& when (@showLogo)": {
+              ".navbar-brand": {
+                ".navbar-logo": {
+                  "amp-img, img": {
+                    "width": "~\"@{logoWidth}px\"",
+                    "height": "~\"@{logoHeight}px\"",
+                    "object-fit": "contain"
+                  }
+                }
+              }
+            },
+            "& when (@showBrand)": {
+              ".navbar-caption": {
+                "line-height": "inherit !important"
+              }
+            },
+            ".navbar .navbar-collapse": {
+              "@media (max-width: 991px)": {
+                "background": "@menuBgColor",
+                "& when (@sidebarSide = 'left')": {
+                  "right": "auto",
+                  "left": "0"
+                }
+              }
+            },
+            "& when (@showItems)": {
+              ".nav-link": {
+                "height": "70px",
+                "margin": ".667em 1em !important",
+                "margin-top": "0",
+                "margin-bottom": "0",
+                "padding": "0 !important",
+                "transition": "0.3s",
+                "&:hover": {
+                  "color": "@primaryColor"
+                }
+              },
+              ".dropdown-item.active, .dropdown-item:active": {
+                "background-color": "transparent"
+              },
+              ".dropdown-menu": {
+                "margin-top": "0",
+                "background": "@menuBgColor",
+                "border-top": "2px solid @primaryColor",
+                "box-shadow": "0 6px 12px rgba(0, 0, 0, 0.175)",
+                "transition": "all 0.3s",
+                ".dropdown-item": {
+                  "justify-content": "flex-start !important"
+                },
+                ".dropdown-item:hover": {
+                  "padding-left": "40px"
+                },
+                "a:hover": {
+                  "color": "@primaryColor"
+                }
+              }
+            },
+            ".hamburger span": {
+              "background-color": "@hamburgerColor"
+            },
+            ".builder-sidebar": {
+              "background-color": "@menuBgColor"
+            },
+            ".close-sidebar": {
+              "&:focus": {
+                "outline": "2px auto @primaryColor"
+              },
+              "span": {
+                "background-color": "@hamburgerColor"
+              }
+            },
+            "& when (@showSocial)": {
+              "& when (@showItems)": {
+                ".menu-social-list": {
+                  "@media (min-width: 992px)": {
+                    "padding-left": "1rem"
+                  },
+                  "@media (max-width: 991px)": {
+                    "padding-top": ".5rem"
+                  }
+                }
+              },
+              "& when (@showButtons)": {
+                ".menu-social-list": {
+                  "@media (max-width: 991px)": {
+                    "padding-bottom": ".5rem"
+                  }
+                }
+              }
+            },
+            ".iconfont-wrapper": {
+              "height": "1.3rem",
+              "width": "1.3rem",
+              "display": "inline-block",
+              ".amp-iconfont": {
+                "vertical-align": "middle",
+                "font-size": "1.3rem",
+                "width": "1.3rem",
+                "color": "@iconsColor"
+              }
+            },
+            ".btn": {
+              "padding": "5px 30px"
+            }
+          },
+          "_name": "menu1",
+          "_customHTML": "<section class=\"menu1 menu horizontal-menu\" group=\"Menu\" plugins=\"DropDown, amp-main, amp-sidebar\" always-top=\"\" global=\"\" once=\"menu\">\n\t<mbr-parameters>\n\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t<!--  -->\n\t<header>Size</header>\n\t<input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked=\"\">\n\t<input type=\"checkbox\" title=\"Sticky Position\" name=\"sticky\">\n\t<!--  -->\n\t<header>Show/Hide</header>\t\n\t<input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked=\"\">\n\t<input type=\"range\" title=\"Logo Height\" inline=\"\" name=\"logoHeight\" min=\"30\" max=\"200\" value=\"62\" step=\"1\" condition=\"showLogo\">\n\t<input type=\"range\" title=\"Logo Width\" inline=\"\" name=\"logoWidth\" min=\"30\" max=\"200\" value=\"200\" step=\"1\" condition=\"showLogo\">\n\t<input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\">\n\t<input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\" checked=\"\">\n\t<input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\" checked=\"\">\n\t<header>Icons</header>\n\t<input type=\"checkbox\" title=\"Show Social\" name=\"showSocial\" checked=\"\">\n\t<input type=\"range\" inline=\"\" title=\"Icons Count\" name=\"socialCount\" min=\"1\" max=\"6\" value=\"5\" step=\"1\" condition=\"showSocial\">\n\t<input type=\"color\" title=\"Icons Color\" name=\"iconsColor\" value=\"#2e7d32\">\n\t<header>Sidebar</header>\n\t<select title=\"Side\" name=\"sidebarSide\">\n\t\t<option value=\"left\">Left</option>\n\t\t<option value=\"right\" selected=\"\">Right</option>\n\t</select>\n\t<input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#43a047\">\n\t<header>Background</header>\n\t<input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#ffffff\" required=\"\">\n\t<!-- End block parameters -->\n\t</mbr-parameters>\n\t<!-- <div class=\"menu-wrapper\"> -->\n\t<nav class=\"navbar navbar-dropdown navbar-expand-lg navbar-short\" mbr-class=\"{'navbar-fixed-top': sticky}\">\n\t\t<div class=\"menu-container\" mbr-class=\"{'container': !fullWidth,\n\t\t\t\t\t\t'container-fluid': fullWidth,\n\t\t\t\t\t\t'mbr-jc-e': !showLogo &amp;&amp; !showBrand}\">\n\t\t\t<!-- SHOW LOGO -->\n\t\t\t<div class=\"navbar-brand\" mbr-if=\"showLogo || showBrand\">\n\t\t\t\t<div mbr-if=\"showLogo\" class=\"navbar-logo\">\n\t\t\t\t\t<amp-img src=\"@PROJECT_PATH@/assets/images/tutela-legale-logo-16-9-400x225.png\" layout=\"responsive\" height=\"62\" width=\"364.7058823529412\" alt=\"image\" class=\"mobirise-loader\">\n\t\t\t\t\t\t<div placeholder=\"\" class=\"placeholder\"></div>\n\t\t\t\t\t\t<img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/tutela-legale-logo-16-9-400x225.png\" alt=\"\" data-aspectratio=\"0.165\">\n\t\t\t\t\t</amp-img>\n\t\t\t\t</div>\n\t\t\t\t<span mbr-if=\"showBrand\" mbr-buttons=\"\" mbr-theme-style=\"display-5\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\">\n\t\t\t\t\t<a class=\"navbar-caption mbr-bold text-black\" data-app-selector=\".navbar-caption\" href=\"#\" mbr-link-type=\"name\">Minimal</a>\n\t\t\t\t</span>\n\t\t\t</div>\n\t\t\t<!-- SHOW LOGO END -->\n\t\t\t<!-- COLLAPSED MENU -->\n\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n\t\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems || showSocial || showButtons\">\n\t\t\t\t<div class=\"hamburger\">\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t</div>\n\t\t\t\t</button>\n\t\t\t\t<!-- NAVBAR ITEMS -->\n\t\t\t\t<ul mbr-menu=\"\" class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-4\" mbr-if=\"showItems\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish &amp;&amp; !showBrand &amp;&amp; !showLogo}\"><li class=\"nav-item dropdown\">\n\t\t\t\t\t\t<a class=\"nav-link link mbr-bold text-black\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-toggle=\"dropdown-submenu\" aria-expanded=\"false\" data-app-placeholder=\"Type Text\">Home</a>\n\t\t\t\t\t\t<div class=\"dropdown-menu\">\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"nav-item dropdown\">\n\t\t\t\t\t\t<a class=\"nav-link mbr-bold link text-black\" href=\"#\" data-toggle=\"dropdown-submenu\" data-app-selector=\".nav-link,.dropdown-item\" aria-expanded=\"true\" data-app-placeholder=\"Type Text\">About Us</a>\n\t\t\t\t\t\t<div class=\"dropdown-menu\">\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"nav-item dropdown\">\n\t\t\t\t\t\t<a class=\"nav-link mbr-bold link text-black\" href=\"#\" data-toggle=\"dropdown-submenu\" data-app-selector=\".nav-link,.dropdown-item\" aria-expanded=\"false\" data-app-placeholder=\"Type Text\">Contacts</a>\n\t\t\t\t\t\t<div class=\"dropdown-menu\">\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li class=\"nav-item dropdown\">\n\t\t\t\t\t\t<a class=\"nav-link mbr-bold link text-black\" href=\"#\" data-toggle=\"dropdown-submenu\" data-app-selector=\".nav-link,.dropdown-item\" aria-expanded=\"false\" data-app-placeholder=\"Type Text\">FAQ</a>\n\t\t\t\t\t\t<div class=\"dropdown-menu\">\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t\t<a class=\"text-black mbr-bold dropdown-item\" href=\"#\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">New Item</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</li></ul>\n\t\t\t\t<!-- NAVBAR ITEMS END -->\n\t\t\t\t<!-- SOCIAL ICON -->\n\t\t\t\t<div class=\"menu-social-list\" mbr-if=\"showSocial\" mbr-list=\"\" mbr-list-grow=\"socialCount\" mbr-link-type=\"socials\">\n\t\t\t\t\t<a href=\"#\" target=\"_blank\" class=\"iconfont-wrapper\">\n\t\t\t\t\t\t<span mbr-icon=\"\" class=\"amp-iconfont animation-normal fa-twitter fa\"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t<a href=\"#\" target=\"_blank\" class=\"iconfont-wrapper\">\n\t\t\t\t\t\t<span mbr-icon=\"\" class=\"amp-iconfont animation-normal fa-facebook fa\"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t<a href=\"#\" target=\"_blank\" class=\"iconfont-wrapper\">\n\t\t\t\t\t\t<span mbr-icon=\"\" class=\"amp-iconfont animation-normal fa-telegram fa\"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t<a href=\"#\" target=\"_blank\" class=\"iconfont-wrapper\">\n\t\t\t\t\t\t<span mbr-icon=\"\" class=\"amp-iconfont animation-normal fa-linkedin fa\"></span>\n\t\t\t\t\t</a><a href=\"#\" target=\"_blank\" class=\"iconfont-wrapper\">\n\t\t\t\t\t\t<span mbr-icon=\"\" class=\"amp-iconfont animation-normal fa-youtube fa\"></span>\n\t\t\t\t\t</a></div>\n\t\t\t\t<!-- SOCIAL ICON END -->\n\t\t\t\t<!-- SHOW BUTTON -->\n\t\t\t\t<div mbr-if=\"showButtons\" mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"navbar-buttons mbr-section-btn\"><a class=\"btn btn-md btn-black mbr-bold\" href=\"index.html#contacts5-2\" data-app-placeholder=\"Type Text\">Contatto</a></div>\n\t\t\t\t<!-- SHOW BUTTON END -->\n\t\t\t</div>\n\t\t\t<!-- COLLAPSED MENU END -->\n\t\t\t<button class=\"navbar-toggler hide\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems || showSocial || showButtons\">\n\t\t\t<div class=\"hamburger\">\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t</div>\n\t\t\t</button>\n\t\t\t<button on=\"tap:sidebar.toggle\" class=\"ampstart-btn hamburger\" mbr-if=\"(showItems||showButtons)\">\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t</button>\n\t\t</div>\n\t</nav>\n\t<!-- AMP plug -->\n\t<amp-sidebar id=\"sidebar\" layout=\"nodisplay\" side=\"{{sidebarSide}}\">\n\t\t<div class=\"builder-sidebar\" id=\"builder-sidebar\">\n\t\t\t<button on=\"tap:sidebar.close\" class=\"close-sidebar\">\n\t\t\t<span></span>\n\t\t\t<span></span>\n\t\t\t</button>\n\t\t</div>\n\t</amp-sidebar>\n\t<!-- </div> -->\n</section>",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_cid": "t8cfknYPHX",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {},
+          "_anchor": "menu1-w"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".card-box": {
+              "width": "100%",
+              "& when (@cardBgOn)": {
+                "padding": "50px 30px",
+                "@media (max-width: 767px)": {
+                  "padding": "30px 20px"
+                },
+                "background-color": "@cardBg"
+              }
+            },
+            ".img-box": {
+              "height": "350px"
+            },
+            "img, amp-img": {
+              "object-fit": "cover"
+            },
+            ".text-box": {
+              "padding": "20px 0px"
+            },
+            ".text-upper": {
+              "text-transform": "uppercase"
+            },
+            ".title-box": {
+              "padding-left": "30px",
+              "margin-left": "30px",
+              "border-left": "2px solid @dateBorderColor",
+              "& when not (@showDate)": {
+                "margin-left": "0"
+              }
+            },
+            ".iconfont-wrapper": {
+              "width": "~\"@{iconsSize}rem\"",
+              "height": "~\"@{iconsSize}rem\"",
+              "display": "inline-flex",
+              "justify-content": "center",
+              "align-items": "center",
+              "margin-right": "10px"
+            },
+            ".amp-iconfont": {
+              "font-size": "~\"@{iconsSize}rem\"",
+              "width": "~\"@{iconsSize}rem\"",
+              "color": "@primaryColor"
+            },
+            ".tag-text": {
+              "display": "inline",
+              "padding-top": "0.5rem",
+              "margin-right": "25px",
+              "&:last-child": {
+                "margin-right": "0"
+              }
+            },
+            ".custom-link a": {
+              "text-transform": "uppercase",
+              "position": "relative"
+            },
+            ".custom-link a::after, .custom-link a::before": {
+              "position": "absolute",
+              "display": "block",
+              "content": "\"\"",
+              "transition": "0.5s",
+              "right": "-33px"
+            },
+            ".custom-link a::after": {
+              "width": "20px",
+              "height": "2px",
+              "top": "~\"calc(50% - 1px)\"",
+              "background": "@arrColor"
+            },
+            ".custom-link a::before": {
+              "width": "6px",
+              "height": "6px",
+              "top": "~\"calc(50% - 3px)\"",
+              "border": "1px solid @arrColor",
+              "border-bottom": "none",
+              "border-left": "none",
+              "transform": "rotate(45deg)"
+            },
+            ".custom-link:hover": {
+              "a::after": {
+                "transform": "translateX(10px)"
+              },
+              "a::before": {
+                "transform": "translateX(10px) rotate(45deg)"
+              }
+            },
+            ".mbr-ai-c": {
+              "align-items": "center"
+            },
+            ".custom-mr": {
+              "margin-right": "45px"
+            }
+          },
+          "_name": "features8",
+          "_sourceTheme": "simpleamp",
+          "_customHTML": "<section class=\"features8\" group=\"Article\" plugins=\"amp-main\">\n    <mbr-parameters>\n    <header>Size</header>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <header>Title</header>\n    <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n    <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n    <select title=\"Align\" name=\"titleAlign\" condition=\"showTitle || showSubtitle\">\n        <option value=\"1\">Left</option>\n        <option value=\"2\" selected>Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <header>Cards</header>\n    <select title=\"Align\" name=\"cardsAlign\">\n        <option value=\"1\" selected>Left</option>\n        <option value=\"2\">Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <input type=\"checkbox\" title=\"Show Date\" name=\"showDate\" checked>\n    <input type=\"checkbox\" title=\"Show Title\" name=\"showCardsTitle\" checked>\n    <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked>\n    <input type=\"range\" title=\"Icons Count\" name=\"iconsAmount\" min=\"1\" max=\"2\" value=\"2\" condition=\"showIcons\">\n    <input type=\"range\" title=\"Icons Size\" name=\"iconsSize\" min=\"1\" max=\"2\" step=\"0.1\" value=\"1\" condition=\"showIcons\">\n    <input type=\"checkbox\" title=\"Show Image\" name=\"showImage\">\n    <input type=\"checkbox\" title=\"Show Text\" name=\"showCardsText\" checked>\n    <input type=\"checkbox\" title=\"Show Links\" name=\"showCardsLinks\">\n    <input type=\"color\" title=\"Date Border Color\" name=\"dateBorderColor\" value=\"#000000\" condition=\"showDate || showCardsTitle || showIcons\">\n    <input type=\"color\" title=\"Links Arrow Color\" name=\"arrColor\" value=\"#000000\" condition=\"showCardsLinks\">\n    <input type=\"checkbox\" title=\"Card Bg\" name=\"cardBgOn\">\n    <input type=\"color\" title=\"Color\" name=\"cardBg\" value=\"#f6f9f8\" condition=\"cardBgOn\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" required>\n        <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n    </fieldset>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type == 'image'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div mbr-class=\"{'container':!fullWidth,\n                     'container-fluid':fullWidth}\">\n        <div class=\"mbr-row mbr-jc-c mbr-pb-5\" mbr-class=\"{'align-center': titleAlign==2,\n                         'align-right': titleAlign==3}\" mbr-if=\"showTitle || showSubtitle\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12\">\n                <h3 class=\"mbr-fonts-style mbr-bold text-upper line-title mbr-pb-4\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\">Our News</h3>\n                <h4 class=\"mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure consequatur voluptates, rerum explicabo ex recusandae!</h4>\n            </div>\n        </div>\n        <div class=\"mbr-row mbr-jc-c mbr-ai-c\">\n            <div class=\"mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-10\">\n                <div class=\"card-box-wrapper\">\n                    <div class=\"card-box\" mbr-class=\"{'align-center': cardsAlign==2,\n                                     'align-right': cardsAlign==3}\">\n                        <div class=\"mbr-flex mbr-pb-3\" mbr-if=\"showDate || showCardsTitle || showIcons\">\n                            <div class=\"date-box\" mbr-if=\"showDate\">\n                                <p class=\"mbr-fonts-style mbr-bold custom-card-date\" mbr-theme-style=\"display-1\" data-app-selector=\".custom-card-date\">27</p>\n                                <p class=\"mbr-fonts-style mbr-bold custom-card-date\" mbr-theme-style=\"display-7\" data-app-selector=\".custom-card-date\">Luglio 2022</p>\n                            </div>\n                            <div class=\"title-box\" mbr-if=\"showCardsTitle || showIcons\">\n                                <h3 class=\"mbr-fonts-style mbr-bold custom-card-title\" mbr-theme-style=\"display-2\" mbr-if=\"showCardsTitle\" data-app-selector=\".custom-card-title\">Termini e condizioni sito</h3>\n                                <div>\n                                <div mbr-if=\"showIcons\">\n                                <div class=\"iconfont-wrapper\">\n                                    <span mbr-icon class=\"amp-iconfont animation-normal mobi-mbri-new-file mobi-mbri\"></span>\n                                </div>\n                                <p class=\"mbr-fonts-style tag-text\" mbr-theme-style=\"display-4\"></p>\n                                <div class=\"iconfont-wrapper\" mbr-if=\"iconsAmount > 1\">\n                                    <span mbr-icon class=\"amp-iconfont animation-normal fa fa-user\"></span>\n                                </div>\n                                <p class=\"mbr-fonts-style tag-text\" mbr-theme-style=\"display-4\" mbr-if=\"iconsAmount > 1\"></p>\n                                </div>\n                            </div>\n                            </div>\n                        </div>\n                        <div class=\"img-box\" mbr-if=\"showImage\">\n                            <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/background8.jpg\" layout=\"responsive\" height=\"9\" width=\"16\" alt=\"image\">\n                                <div placeholder class=\"placeholder\"></div>\n                                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/background8.jpg\" alt>\n                            </amp-img>\n                        </div>\n                        <div class=\"text-box\" mbr-if=\"showCardsText || showCardsLinks\">\n                            <p class=\"mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showCardsText\"><br>Termini e Condizioni:\n<br>\n<br>Ultimo aggiornamento: 27 luglio 2022\n<br>\n<br>Si prega di leggere attentamente questi termini e condizioni prima di utilizzare il nostro servizio.<br>\n<br>Interpretazione e definizioni\n<br>\n<br>Interpretazione:\n<br>Le parole di cui la lettera iniziale è maiuscola hanno significati definiti nelle seguenti condizioni. Le seguenti definizioni avranno lo stesso significato indipendentemente dal fatto che appaiano al singolare o al plurale.\n<br>\n<br>Definizioni:\n<br>\n<br>Ai fini di questi Termini e Condizioni:\n<br>Affiliato indica un'entità che controlla, è controllata da o è sotto il controllo comune con una parte, dove \"controllo\" significa la proprietà del 50% o più di azioni, partecipazioni o altri titoli aventi diritto al voto per l'elezione di amministratori o altra autorità di gestione .\n<br>\n<br>Paese si riferisce a: Italia\n<br>\n<br>Società (denominata \"la Società\", \"Noi\", \"Ci\" o \"Nostro\" nel presente Accordo) si riferisce a Xure.it di Pasquale Caterisano, via Pietro Valsecchi, 2 -22033 Asso (CO).\n<br>\n<br>Dispositivo indica qualsiasi dispositivo che può accedere al Servizio come un computer, un cellulare o un tablet digitale.\n<br>Il servizio si riferisce al Sito.\n<br>\n<br>Termini e Condizioni (indicati anche come \"Termini\") indicano questi Termini e Condizioni che costituiscono l'intero accordo tra l'Utente e la Società in merito all'utilizzo del Servizio. Questo contratto di Termini e Condizioni è stato creato con l'aiuto del Generatore di Termini e Condizioni .\n<br>\n<br>Servizio di social media di terze parti indica qualsiasi servizio o contenuto (inclusi dati, informazioni, prodotti o servizi) fornito da una terza parte che potrebbe essere visualizzato, incluso o reso disponibile dal Servizio.\n<br>\n<br>Il sito web fa riferimento a Tutela-legale.net, accessibile da https://www.tutela-legale.net<br>\n<br>Si intende l'individuo che accede o utilizza il Servizio, o la società o altra persona giuridica per conto del quale tale individuo accede o utilizza il Servizio, a seconda dei casi.\n<br>\n<br>Riconoscimento:\n<br>Questi sono i Termini e le Condizioni che regolano l'uso di questo Servizio e l'accordo che opera tra l'Utente e la Società. Questi Termini e Condizioni stabiliscono i diritti e gli obblighi di tutti gli utenti in merito all'utilizzo del Servizio.\n<br>\n<br>L'accesso e l'utilizzo del Servizio sono condizionati dall'accettazione e dal rispetto di questi Termini e Condizioni. Questi Termini e Condizioni si applicano a tutti i visitatori, utenti e altri che accedono o utilizzano il Servizio.\n<br>\n<br>Accedendo o utilizzando il Servizio accetti di essere vincolato da questi Termini e Condizioni. Se non sei d'accordo con qualsiasi parte di questi Termini e Condizioni, non puoi accedere al Servizio.\n<br>\n<br>Dichiari di avere più di 18 anni. La Società non consente ai minori di 18 anni di utilizzare il Servizio.\n<br>\n<br>L'accesso e l'utilizzo del Servizio sono inoltre condizionati dall'accettazione e dal rispetto dell'Informativa sulla privacy della Società. La nostra Informativa sulla privacy descrive le nostre politiche e procedure sulla raccolta, l'uso e la divulgazione delle tue informazioni personali quando utilizzi l'applicazione o il sito Web e ti informa sui tuoi diritti alla privacy e su come la legge ti protegge. Si prega di leggere attentamente la nostra Informativa sulla privacy prima di utilizzare il nostro servizio.\n<br>Collegamenti ad altri siti web.\n<br>\n<br>\n<br>Il nostro Servizio può contenere collegamenti a siti Web o servizi di terze parti che non sono di proprietà o controllati dalla Società.\n<br>\n<br>La Società non ha alcun controllo e non si assume alcuna responsabilità per il contenuto, le politiche sulla privacy o le pratiche di siti Web o servizi di terzi. Riconosci e accetti inoltre che la Società non sarà responsabile, direttamente o indirettamente, per eventuali danni o perdite causati o presumibilmente causati da o in connessione con l'uso o l'affidamento su tali contenuti, beni o servizi disponibili su o tramite uno qualsiasi di tali siti web o servizi.\n<br>\n<br>Ti consigliamo vivamente di leggere i termini e le condizioni e le politiche sulla privacy di qualsiasi sito Web o servizio di terze parti che visiti.\n<br>\n<br>Cessazione:\n<br>Possiamo interrompere o sospendere l'accesso dell'utente immediatamente, senza preavviso o responsabilità, per qualsiasi motivo, incluso senza limitazione se si violano questi Termini e condizioni.\n<br>\n<br>In caso di risoluzione, il tuo diritto di utilizzare il Servizio cesserà immediatamente.\n<br>\n<br>Limitazione di responsabilità:\n<br>Nonostante eventuali danni che potresti subire, l'intera responsabilità della Società e dei suoi fornitori ai sensi di qualsiasi disposizione di questi Termini e il tuo rimedio esclusivo per tutto quanto sopra sarà limitato all'importo effettivamente pagato da te tramite il Servizio o 100 € se non hai acquistato nulla tramite il Servizio.\n<br>\n<br>Nella misura massima consentita dalla legge applicabile, in nessun caso la Società o i suoi fornitori saranno responsabili per eventuali danni speciali, incidentali, indiretti o consequenziali di alcun tipo (inclusi, a titolo esemplificativo, danni per mancato guadagno, perdita di dati o altre informazioni, per interruzione dell'attività, per lesioni personali, perdita di privacy derivante da o in qualsiasi modo correlata all'uso o all'impossibilità di utilizzare il Servizio, software di terze parti e/o hardware di terze parti utilizzati con il Servizio, oppure altrimenti in relazione a qualsiasi disposizione delle presenti Condizioni), anche se la Società o qualsiasi fornitore è stato informato della possibilità di tali danni e anche se il rimedio non raggiunge il suo scopo essenziale.\n<br>\n<br>Alcuni stati non consentono l'esclusione di garanzie implicite o la limitazione di responsabilità per danni incidentali o consequenziali, il che significa che alcune delle limitazioni di cui sopra potrebbero non essere applicabili. In questi stati, la responsabilità di ciascuna parte sarà limitata nella misura massima consentita dalla legge.\n<br>\n<br>Dichiarazione di non responsabilità \"COSÌ COM'È\" e \"COME DISPONIBILE\".\n<br>\n<br>Il Servizio ti viene fornito \"COSÌ COM'È\" e \"COME DISPONIBILE\" e con tutti i vizi e difetti senza garanzie di alcun tipo. Nella misura massima consentita dalla legge applicabile, la Società, per proprio conto e per conto delle sue Affiliate e dei suoi rispettivi concessori di licenza e fornitori di servizi, declina espressamente tutte le garanzie, espresse, implicite, legali o di altro tipo, in relazione al Servizio, comprese tutte le garanzie implicite di commerciabilità, idoneità per uno scopo particolare, titolo e non violazione, e garanzie che possono derivare da operazioni commerciali, prestazioni, utilizzo o pratiche commerciali. Senza limitazione a quanto sopra, la Società non fornisce alcuna garanzia o impegno e non rilascia alcuna dichiarazione di alcun tipo che il Servizio soddisferà le tue esigenze, raggiungerà i risultati previsti,\n<br>Senza limitare quanto sopra, né la Società né alcuno dei fornitori della società rilascia alcuna dichiarazione o garanzia di alcun tipo, esplicita o implicita: (i) per quanto riguarda il funzionamento o la disponibilità del Servizio, o le informazioni, i contenuti, i materiali o i prodotti ivi incluso; (ii) che il Servizio sarà ininterrotto o privo di errori; (iii) per quanto riguarda l'accuratezza, l'affidabilità o l'attualità di qualsiasi informazione o contenuto fornito tramite il Servizio; o (iv) che il Servizio, i suoi server, il contenuto o le e-mail inviate da o per conto della Società sono privi di virus, script, cavalli di Troia, worm, malware, timebomb o altri componenti dannosi.\n<br>\n<br>Alcune giurisdizioni non consentono l'esclusione di determinati tipi di garanzie o limitazioni ai diritti legali applicabili di un consumatore, pertanto alcune o tutte le esclusioni e limitazioni di cui sopra potrebbero non essere applicabili all'Utente. Ma in tal caso le esclusioni e le limitazioni stabilite nella presente sezione si applicano nella misura massima applicabile ai sensi della legge applicabile.\n<br>\n<br>Legge governativa\n<br>Le leggi del Paese, escluse le norme sui conflitti di legge, regoleranno i presenti Termini e l'utilizzo del Servizio da parte dell'Utente. L'utilizzo dell'Applicazione può anche essere soggetto ad altre leggi locali, statali, nazionali o internazionali.\n<br>\n<br>Risoluzione delle controversie\n<br>In caso di dubbi o controversie sul Servizio, accetti di provare prima a risolvere la controversia in modo informale contattando la Società.\n<br>\n<br>Per gli utenti dell'Unione Europea (UE).\n<br>Se sei un consumatore dell'Unione Europea, beneficerai di tutte le disposizioni obbligatorie della legge del paese in cui risiedi.\n<br>\n<br>Separabilità e rinuncia\n<br>\n<br>Separabilità\n<br>Se una qualsiasi disposizione di questi Termini è ritenuta inapplicabile o non valida, tale disposizione sarà modificata e interpretata per raggiungere gli obiettivi di tale disposizione nella misura più ampia possibile ai sensi della legge applicabile e le restanti disposizioni continueranno ad avere pieno vigore ed efficacia.\n<br>\n<br>Rinuncia\n<br>Salvo quanto qui previsto, il mancato esercizio di un diritto o la richiesta di adempimento di un obbligo ai sensi dei presenti Termini non influirà sulla capacità di una parte di esercitare tale diritto o richiedere tale adempimento in qualsiasi momento successivo né la rinuncia a una violazione costituirà una rinuncia a ogni successiva violazione.\n<br>\n<br>Interpretazione della traduzione\n<br>Questi Termini e Condizioni potrebbero essere stati tradotti se li abbiamo messi a tua disposizione sul nostro Servizio. Accetti che il testo inglese originale prevale in caso di controversia.\n<br>\n<br>Modifiche a questi Termini e condizioni\n<br>Ci riserviamo il diritto, a nostra esclusiva discrezione, di modificare o sostituire questi Termini in qualsiasi momento. Se una revisione è sostanziale, faremo ogni ragionevole sforzo per fornire un preavviso di almeno 30 giorni prima dell'entrata in vigore di qualsiasi nuovo termine. Ciò che costituisce un cambiamento sostanziale sarà determinato a nostra esclusiva discrezione.\n<br>\n<br>Continuando ad accedere o utilizzare il Nostro Servizio dopo che tali revisioni sono diventate effettive, accetti di essere vincolato dai termini modificati.\n<br>\n<br>Se non accetti i nuovi termini, in tutto o in parte, ti preghiamo di interrompere l'utilizzo del sito Web e del Servizio.\n<br>\n<br>Contattaci\n<br>\n<br>In caso di domande su questi Termini e condizioni, puoi contattarci:\n<br>\n<br>Via email: info@tutela-legale.net<br>Visitando questa pagina del nostro sito: https://www.tutela-legale.net<br>Per numero di telefono: +393382234395<br></p>\n                            <div class=\"custom-link link mbr-fonts-style mbr-bold mbr-black mbr-pt-3\" mbr-text mbr-theme-style=\"display-7\" mbr-if=\"showCardsLinks\" data-app-selector=\".custom-link\" mbr-class=\"{'custom-mr': cardsAlign == 3}\">\n                                <a href=\"#\" class=\"text-primary\">Read More</a></div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "t8cfkoDsnD",
+          "_anchor": "features8-x",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".link-items": {
+              ".fLink": {
+                "width": "auto"
+              }
+            },
+            "& when (@typeBlock = '1')": {
+              ".mbr-row": {
+                "margin": "0",
+                "& when (@showCopyright)": {
+                  "&:nth-child(1)": {
+                    "margin-bottom": "1rem"
+                  }
+                }
+              }
+            },
+            "& when (@typeBlock = '2')": {
+              ".footer-container": {
+                "& when (@showCopyright) and (@showItems)": {
+                  "@media (min-width: 992px)": {
+                    "justify-content": "space-between"
+                  },
+                  "@media (max-width: 991px)": {
+                    "flex-direction": "column",
+                    "align-items": "center"
+                  }
+                }
+              },
+              ".mbr-row": {
+                "width": "auto",
+                "@media (max-width: 992px)": {
+                  "padding": "0",
+                  "width": "100%",
+                  "justify-content": "center",
+                  "& when (@showCopyright)": {
+                    "&:nth-child(1)": {
+                      "margin-bottom": "1rem"
+                    }
+                  }
+                }
+              },
+              ".copyright": {
+                "width": "auto"
+              }
+            },
+            ".mbr-text-al-c": {
+              "text-align": "center"
+            },
+            ".iconfont-wrapper": {
+              "width": "~\"@{iconsSize}rem\"",
+              "height": "~\"@{iconsSize}rem\"",
+              "display": "inline-flex",
+              "padding": "15px 20px",
+              "margin-right": "15px",
+              "justify-content": "center",
+              "align-items": "center",
+              "border-radius": "3px",
+              "cursor": "pointer"
+            },
+            ".amp-iconfont": {
+              "font-size": "~\"@{iconsSize}rem\"",
+              "width": "~\"@{iconsSize}rem\"",
+              "color": "@primaryColor",
+              "vertical-align": "middle"
+            },
+            ".custom-bg-1": {
+              "transition": "0.5s",
+              "&:hover": {
+                "background-color": "@icon1Bg",
+                ".amp-iconfont": {
+                  "color": "white"
+                }
+              }
+            },
+            ".custom-bg-2": {
+              "transition": "0.5s",
+              "&:hover": {
+                "background-color": "@icon2Bg",
+                ".amp-iconfont": {
+                  "color": "white"
+                }
+              }
+            },
+            ".custom-bg-3": {
+              "transition": "0.5s",
+              "&:hover": {
+                "background-color": "@icon3Bg",
+                ".amp-iconfont": {
+                  "color": "white"
+                }
+              }
+            },
+            ".custom-bg-4": {
+              "transition": "0.5s",
+              "&:hover": {
+                "background-color": "@icon4Bg",
+                ".amp-iconfont": {
+                  "color": "white"
+                }
+              }
+            },
+            ".custom-bg-5": {
+              "transition": "0.5s",
+              "&:hover": {
+                "background-color": "@icon5Bg",
+                ".amp-iconfont": {
+                  "color": "white"
+                }
+              }
+            },
+            ".custom-bg-6": {
+              "transition": "0.5s",
+              "&:hover": {
+                "background-color": "@icon6Bg",
+                ".amp-iconfont": {
+                  "color": "white"
+                }
+              }
+            },
+            ".copyright .mbr-text": {
+              "text-align": "left"
+            },
+            "P": {
+              "text-align": "left"
+            },
+            ".fLink": {
+              "text-align": "left"
+            }
+          },
+          "_name": "footer2",
+          "_customHTML": "<section class=\"footer2\" group=\"Footers\" plugins=\"amp-main\" global once=\"footer\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <header>Size</header>\n    <select title=\"Block Type\" name=\"typeBlock\">\n        <option value=\"1\">Type 1</option>\n        <option value=\"2\" selected>Type 2</option>\n    </select>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Reverse Content\" name=\"reverseContent\" condition=\"typeBlock==2\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n    <!--  -->\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Items\" name=\"showItems\" checked>\n    <input type=\"range\" inline title=\"Items Count\" name=\"itemsCount\" min=\"1\" max=\"7\" step=\"1\" value=\"2\" condition=\"showItems\">\n    <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Copyright\" name=\"showCopyright\" checked>\n    <header>Icons</header>\n    <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked>\n    <input type=\"range\" title=\"Icons Count\" name=\"iconsAmount\" min=\"1\" max=\"6\" value=\"5\" condition=\"showIcons\">\n    <input type=\"range\" title=\"Icons Size\" name=\"iconsSize\" min=\"1\" max=\"2.5\" step=\"0.1\" value=\"1.7\" condition=\"showIcons\">\n    <input type=\"color\" title=\"Icon 1 BG\" name=\"icon1Bg\" value=\"#55acee\" condition=\"showIcons\">\n    <input type=\"color\" title=\"Icon 2 BG\" name=\"icon2Bg\" value=\"#e4405f\" condition=\"showIcons &amp;&amp; iconsAmount > 1\">\n    <input type=\"color\" title=\"Icon 3 BG\" name=\"icon3Bg\" value=\"#cd201f\" condition=\"showIcons &amp;&amp; iconsAmount > 2\">\n    <input type=\"color\" title=\"Icon 4 BG\" name=\"icon4Bg\" value=\"#3b5999\" condition=\"showIcons &amp;&amp; iconsAmount > 3\">\n    <input type=\"color\" title=\"Icon 5 BG\" name=\"icon5Bg\" value=\"#0088cc\" condition=\"showIcons &amp;&amp; iconsAmount > 4\">\n    <input type=\"color\" title=\"Icon 6 BG\" name=\"icon6Bg\" value=\"#4c75a3\" condition=\"showIcons &amp;&amp; iconsAmount > 5\">\n    <!--  -->\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\">\n        <input type=\"image\" title=\"Background Image\" value=\"@THEME_PATH@/components/_images/background4.jpg\">\n        <input type=\"color\" title=\"Background Color\" value=\"#d3ead4\" selected>\n    </fieldset>\n    <!--  -->\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' && overlay\">\n    <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"footer-container\" mbr-class=\"{'container': !fullWidth,\n                     'container-fluid': fullWidth,\n                     'mbr-jc-c': (!showCopyright || !showItems) && typeBlock==2,\n                     'mbr-flex': typeBlock==2,\n                     'mbr-row-reverse': reverseContent}\">\n        <div mbr-list mbr-list-grow=\"itemsCount\" class=\"mbr-row link-items mbr-jc-c mbr-fonts-style\" mbr-if=\"showItems\" mbr-theme-style=\"display-7\">\n            <p class=\"mbr-text fLink mbr-px-1 mbr-bold\" data-app-selector=\".fLink\">Informazioni di contatto e ufficio di rappresentanza:<br>\n<br><span style=\"font-weight: normal;\">Via Uberto Visconti di Modrone, 6 - 20122 Milano<br>\n<br><i>info@tutela-legale.net</i><br>+39 338 - 22 34 395</span></p>\n            \n            \n            \n            \n        <p class=\"mbr-text fLink mbr-px-1 mbr-bold\" data-app-selector=\".fLink\"><br>\n<br><br></p></div>\n        <div class=\"mbr-pt-3 mbr-pb-5 mbr-text-al-c\">\n            <p class=\"mbr-fonts-style mbr-pb-3\" mbr-theme-style=\"display-7\" mbr-if=\"showText\"><b>Tutela-legale.net è un marchio:</b><br>Xure.it di Pasquale Caterisano<br>Via Pietro Valsecchi, 2 - 22033 Asso (CO)\n<br>RUI A000055288  P. IVA 04012380137\n<br>PEC: pasquale.caterisano @ pec.it&nbsp;</p>\n            <div class=\"iconfont-wrapper custom-bg-1\" mbr-if=\"showIcons\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa-linkedin-square fa\"></span>\n            </div>\n            <div class=\"iconfont-wrapper custom-bg-2\" mbr-if=\"showIcons &amp;&amp; iconsAmount > 1\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-instagram\"></span>\n            </div>\n            <div class=\"iconfont-wrapper custom-bg-3\" mbr-if=\"showIcons &amp;&amp; iconsAmount > 2\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-youtube\"></span>\n            </div>\n            <div class=\"iconfont-wrapper custom-bg-4\" mbr-if=\"showIcons &amp;&amp; iconsAmount > 3\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-facebook\"></span>\n            </div>\n            <div class=\"iconfont-wrapper custom-bg-1\" mbr-if=\"showIcons &amp;&amp; iconsAmount > 4\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-twitter\"></span>\n            </div>\n            <div class=\"iconfont-wrapper custom-bg-2\" mbr-if=\"showIcons &amp;&amp; iconsAmount > 5\">\n                <span mbr-icon class=\"amp-iconfont animation-normal fa fa-instagram\"></span>\n            </div>\n        </div>\n        <div class=\"copyright mbr-px-2 mbr-flex mbr-jc-c\" mbr-if=\"showCopyright\">\n            <p class=\"mbr-text mbr-fonts-style align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".copyright .mbr-text\" data-app-placeholder=\"Type Text\"><a href=\"https://www.iubenda.com/privacy-policy/13214559/legal\" class=\"text-primary\" target=\"_blank\">Privacy e Cookie Policy</a>\n<br><a href=\"assets/files/Allegati-3-4-4ter-xure.it-Pasquale-Caterisano.pdf\" class=\"text-primary\" target=\"_blank\">Allegato 3 ,  Allegato 4,  Allegato 4Ter\n</a><br><a href=\"https://www.arag.it/si/download/I/FP/FP/tradizionale_standard/IT\" class=\"text-primary\" target=\"_blank\">Set informativo</a>\n<br><a href=\"https://www.arag.it/si/download/I/FP/FP/tradizionale_standard/IT\" class=\"text-primary\" target=\"_blank\">Condizioni di polizza\n</a><br>Reclami<br>Normativa vendita a distanza<br>Termini e condizioni sito<br><br>Tutela-legale.net © Copyright 2025 - All Rights Reserved</p>\n        </div>\n    </div>\n</section>",
+          "_cid": "t8cfkpoRai",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footer",
+          "_params": {},
+          "_anchor": "footer2-y"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            }
+          },
+          "_name": "footer3",
+          "_sourceTheme": "trainingamp",
+          "_customHTML": "<section class=\"Footers3\" group=\"Footers\" plugins=\"amp-main\" global once=\"footer\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <!--  -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n        <!--  -->\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"@ADDONS_PATH@/trainingamp/components/_images/background4.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#9e9e9e\" selected>\n        </fieldset>\n        <!--  -->\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type!='color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"bg.type!='color' && overlay\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container\">\n        <div class=\"copyright mbr-flex mbr-jc-c\">\n            <p class=\"mbr-text mbr-fonts-style mbr-regular mbr-white align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".copyright .mbr-text\" data-app-placeholder=\"Type Text\">This site is not a part of Facebook or Google websites.  Additionally, this site is NOT endorsed by Facebook or Google in any way.  Facebook is a trademark of Meta Platforms, Inc.  Google is a trademark of Alphabet Inc.</p>\n        </div>\n    </div>\n</section>",
+          "_cid": "t8cfkpVt9u",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footer",
+          "_params": {},
+          "_anchor": "footer3-z"
         }
       ]
     }
