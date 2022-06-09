@@ -1162,7 +1162,8 @@
     "Informativa-vendita-distanza.html": {
       "settings": {
         "title": "Informativa vendita a distanza Tutela-legale.net",
-        "order": 1
+        "order": 1,
+        "meta_descr": "Informativa vendita a distanza tutela legale"
       },
       "components": [
         {
